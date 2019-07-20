@@ -97,12 +97,12 @@ $(document).ready(function() {
     if ($("#menu").hasClass("visible")) {
       $("#menu").css({ left: 0, transition: ".4s ease-in-out" });
       $(".content-wrapper").css({
-        "padding-left": "300px",
+        "padding-left": "235px",
         transition: ".4s ease-in-out"
       });
       $(".menu-overlay").show();
     } else {
-      $("#menu").css({ left: -320, transition: ".4s ease-in-out" });
+      $("#menu").css({ left: -270, transition: ".4s ease-in-out" });
       $(".content-wrapper").css({
         "padding-left": "0",
         transition: ".4s ease-in-out"

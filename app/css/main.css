@@ -940,7 +940,8 @@ h3.title {
     margin-right: 58px; }
   .content-wrapper .main__right-content .right-container {
     width: 100%;
-    padding-right: 15px; }
+    padding-right: 15px;
+    max-width: 753px; }
   .content-wrapper .main__right-content .right-content__header .content-header-search {
     margin-right: 50px; }
   .content-wrapper .main__right-content .right-content__header {
@@ -948,9 +949,9 @@ h3.title {
   .content-wrapper .main__right-content .right-content__header .content-header-cart {
     margin-right: 50px; }
   .content-wrapper .main__left-content {
-    width: 28%; }
+    width: 35%; }
   .content-wrapper .main__right-content {
-    width: 72%; }
+    width: 65%; }
   .content-wrapper .main__left-content .left-content-container .left-container-catalog {
     margin-bottom: 70px; }
   .content-wrapper .main__right-content .right-content-footer .right-content-footer-sitemap {
@@ -970,6 +971,12 @@ h3.title {
   .content-wrapper .main__right-content .right-content__tabs .right-tabs-block__content .tabs-content-item .product-image {
     max-width: initial;
     width: 100%; } }
+
+@media (max-width: 1200px) {
+  .content-wrapper .main__right-content {
+    width: 70%; }
+  .content-wrapper .main__left-content {
+    width: 30%; } }
 
 @media (max-width: 1024px) {
   .content-wrapper .main__left-content {
@@ -1091,7 +1098,7 @@ h3.title {
     z-index: 999; }
   #menu {
     position: fixed;
-    width: 300px;
+    width: 250px;
     height: 100%;
     background: #000;
     left: -320px;
