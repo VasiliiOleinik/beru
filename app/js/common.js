@@ -63,6 +63,7 @@ $(document).ready(function() {
     });
     $("#tabs").tabs();
   }
+  $("#partners").tabs();
 
   // Мобильна версия
   if (screen.width < 1025) {
@@ -118,4 +119,10 @@ $(document).ready(function() {
 
   // Блокирую хлебную крошку на текущей странице
     $('.breadcrumb-item.current').find('.breadcrumb-link').attr('href', 'javascript:void(0)');
+
+  $('.partners-content__tabs .partners-tab').on('click', function(){
+    $('.partners-content__tabs .partners-tab').removeClass('active');
+    $(this).addClass('active');
+  });
+
 });

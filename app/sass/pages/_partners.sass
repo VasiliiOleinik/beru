@@ -1,0 +1,75 @@
+.partners-content
+	&__tabs
+		margin-bottom: 30px
+		display: flex
+		flex-direction: row
+		align-items: center
+
+		& .partners-tab
+			border: 2px solid #1a2533
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 8px 23px
+			color: #1a2533
+			font-family: "Open Sans"
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			margin-right: 10px
+			transition: .3s
+
+			&:hover,
+			&.active
+				background-color: #1a2533
+				color: #ffffff
+				font-family: "Open Sans"
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+				transition: .3s
+	&__description
+		margin-bottom: 20px
+		background-color: #ffffff
+		padding: 20px 15px 40px 15px
+
+		& .partners-tab-text
+			color: #3a4e5f
+			font-family: "Open Sans"
+			font-size: 14px
+			font-weight: 400
+			margin-bottom: 20px
+
+			&.bold
+				font-weight: 700
+			&.uppercase
+				text-transform: uppercase
+		& .partners-tab-list
+			margin-bottom: 20px
+
+			& .partners-tab-text
+				margin: 0px
+
+@include media( 450 )
+	.partners-content .partners-content__tabs li
+		width: 100%
+		margin-bottom: 10px
+		& .partners-tab 
+			width: 100%
+
+
+.ui-widget-header
+	background: none
+	border: none
+	color: initial
+	font-weight: initial
+.ui-widget-content,
+.ui-widget.ui-widget-content
+	background: transparent
+	border: none
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover,
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus,
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+	background: none
+	border: none
+
