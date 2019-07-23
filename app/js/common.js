@@ -115,4 +115,7 @@ $(document).ready(function() {
     $(".mobile-menu").click();
     $(".mobile-menu .hamburger").toggleClass('is-active');
   });
+
+  // Блокирую хлебную крошку на текущей странице
+    $('.breadcrumb-item.current').find('.breadcrumb-link').attr('href', 'javascript:void(0)');
 });
