@@ -144,5 +144,15 @@ $(document).ready(function() {
     $('.partners-content__tabs .partners-tab').removeClass('active');
     $(this).addClass('active');
   });
-
+  // Скрываю label когда input активен
+  $(" .label .input").on("click", function() {
+    $(this)
+      .siblings("label").css({'opacity':'0', 'transition':'.2s ease-in-out'});
+  });
+  $(".label .input").on("blur", function() {
+    if ($(this).val().length == "") {
+      $(this)
+        .siblings("label").css({'opacity':'1', 'transition':'.2s ease-in-out'});
+    }
+  });
 });
