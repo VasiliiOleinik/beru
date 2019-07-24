@@ -188,78 +188,78 @@ append content
                         h4.tab-block-title Новинки       
                         .right-tabs-block__content#tab1(class="owl-carousel")
                             each item in tabProdFirst
-                                .tabs-content-item
+                                 .product
                                     img.product-image(src=item.img, alt=item.name)
-                                    p.tabs-content-item-label Артикул:
+                                    p.product-label Артикул:
                                         span=item.art
-                                    p.tabs-content-item-label Код товара:
+                                    p.product-label Код товара:
                                         span=item.code
-                                    p.tabs-content-item-text=item.description
-                                    .tabs-content-item-count
-                                        p.tabs-content-item-label.bold Количество:
-                                        .item-choose-count
-                                            span.item-choose-count-choosen
-                                            ul.item-choose-count-list
+                                    p.product-text=item.description
+                                    .product-count
+                                        p.product-label.bold Количество:
+                                        .product-choose-count
+                                            span.product-choose-count-choosen
+                                            ul.product-choose-count-list
                                                 each item in prodCout
-                                                    li.count-list-item=item
-                                    .tabs-content-item-footer
-                                        .item-footer-left
-                                            p.tabs-content-item-label.bold Цена:
+                                                    li.product-list-item=item
+                                    .product-footer
+                                        .product-footer-left
+                                            p.product-label.bold Цена:
                                                 span.price=item.price
                                                 span.currency=item.currency
-                                        .item-footer-right
+                                        .product-footer-right
                                             button.item-to-cart
                                                 img(src="img/white-cart-ico.png", alt="White cart")
                                                 | В корзину
                         h4.tab-block-title Сезонные предложения                       
                         .right-tabs-block__content#tab2(class="owl-carousel")
                             each item in tabProdSecond
-                                .tabs-content-item
+                                .product
                                     img.product-image(src=item.img, alt=item.name)
-                                    p.tabs-content-item-label Артикул:
+                                    p.product-label Артикул:
                                         span=item.art
-                                    p.tabs-content-item-label Код товара:
+                                    p.product-label Код товара:
                                         span=item.code
-                                    p.tabs-content-item-text=item.description
-                                    .tabs-content-item-count
-                                        p.tabs-content-item-label.bold Количество:
-                                        .item-choose-count
-                                            span.item-choose-count-choosen
-                                            ul.item-choose-count-list
+                                    p.product-text=item.description
+                                    .product-count
+                                        p.product-label.bold Количество:
+                                        .product-choose-count
+                                            span.product-choose-count-choosen
+                                            ul.product-choose-count-list
                                                 each item in prodCout
-                                                    li.count-list-item=item
-                                    .tabs-content-item-footer
-                                        .item-footer-left
-                                            p.tabs-content-item-label.bold Цена:
+                                                    li.product-list-item=item
+                                    .product-footer
+                                        .product-footer-left
+                                            p.product-label.bold Цена:
                                                 span.price=item.price
                                                 span.currency=item.currency
-                                        .item-footer-right
+                                        .product-footer-right
                                             button.item-to-cart
                                                 img(src="img/white-cart-ico.png", alt="White cart")
                                                 | В корзину
                         h4.tab-block-title Хиты
                         .right-tabs-block__content#tab3(class="owl-carousel")
                             each item in tabProdThird
-                                .tabs-content-item
+                                .product
                                     img.product-image(src=item.img, alt=item.name)
-                                    p.tabs-content-item-label Артикул:
+                                    p.product-label Артикул:
                                         span=item.art
-                                    p.tabs-content-item-label Код товара:
+                                    p.product-label Код товара:
                                         span=item.code
-                                    p.tabs-content-item-text=item.description
-                                    .tabs-content-item-count
-                                        p.tabs-content-item-label.bold Количество:
-                                        .item-choose-count
-                                            span.item-choose-count-choosen
-                                            ul.item-choose-count-list
+                                    p.product-text=item.description
+                                    .product-count
+                                        p.product-label.bold Количество:
+                                        .product-choose-count
+                                            span.product-choose-count-choosen
+                                            ul.product-choose-count-list
                                                 each item in prodCout
-                                                    li.count-list-item=item
-                                    .tabs-content-item-footer
-                                        .item-footer-left
-                                            p.tabs-content-item-label.bold Цена:
+                                                    li.product-list-item=item
+                                    .product-footer
+                                        .product-footer-left
+                                            p.product-label.bold Цена:
                                                 span.price=item.price
                                                 span.currency=item.currency
-                                        .item-footer-right
+                                        .product-footer-right
                                             button.item-to-cart
                                                 img(src="img/white-cart-ico.png", alt="White cart")
                                                 | В корзину

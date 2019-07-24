@@ -40,18 +40,38 @@ $(document).ready(function() {
       }
     }
   });
+    // Акционная карусель
+    $(".action-detail__products-carousel.owl-carousel").owlCarousel({
+      loop: true,
+      nav: false,
+      dots: false,
+      autoplay: false,
+      margin: 5,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 0
+        },
+        768: {
+          items: 3
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
 
   // Селекты
-  $(".item-choose-count").on("click", function() {
+  $(".product-count").on("click", function() {
     $(this)
-      .find(".item-choose-count-list")
+      .find(".product-choose-count-list")
       .slideToggle();
   });
-  $(".count-list-item").on("click", function() {
+  $(".product-list-item").on("click", function() {
     var thisText = $(this).text();
     $(this)
-      .parent(".item-choose-count-list")
-      .siblings(".item-choose-count-choosen")
+      .parent(".product-choose-count-list")
+      .siblings(".product-choose-count-choosen")
       .text(thisText);
   });
 
