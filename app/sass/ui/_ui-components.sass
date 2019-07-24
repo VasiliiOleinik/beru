@@ -99,85 +99,151 @@ select, input, textarea
   & img
     margin-right: 5px
 
-.send-msg-btn
+.change-background
+  background-color: #e6e6e6
+
+.action
+  width: 152px
+  height: 40px
+  border-radius: 5px
+  background-color: #d0021b
   display: flex
-  width: 270px
-  height: 50px
-  background-color: #1a2533
   justify-content: center
   align-items: center
   color: #ffffff
   font-family: "Open Sans"
-  font-size: 13px
+  font-size: 24px
   font-weight: 700
-  text-transform: uppercase
-  margin-bottom: 60px
-  
-.change-background
-  background-color: #e6e6e6
-
-.label
   position: relative
+
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    border: 10px solid transparent
+    border-top: 12px solid #d0021b
+    top: 100%
+    left: 35px
+
+.product
+  width: auto
+  display: flex
+  flex-direction: column
   box-shadow: 0 2px 10px rgba(183, 183, 183, 0.5)
   background-color: #ffffff
+  padding: 15px
+  margin: 0px 5px
 
-  & label
-    position: absolute
-    top: 17px
-    left: 15px
-    z-index: 1
-    color: #3a4e5f
-    font-family: "Open Sans"
-    font-size: 14px
+  & .product-image
+    max-width: 370px
+    margin: 0px auto
+    margin-bottom: 30px
+  
+  & .product-label
+    color: #ed3833
+    font-size: 13px
     font-weight: 600
-    line-height: 13px
+    display: flex
+    width: auto
+    align-items: center
 
     & span
-      color: #fe1818
+      color: #333333
+      padding-left: 5px
+    
+    &.bold
+      color: #ff0000
+      font-size: 14px
+      font-weight: 700
 
-.input
-  position: relative
-  z-index: 2
-  padding: 0px 15px
-  color: #3a4e5f
-  font-family: "Open Sans"
-  font-size: 14px
-  font-weight: 600
-
-.styled-checkbox
-  display: flex
-  width: 100%
-  position: relative
-
-  & .checbox-custom-text
-    color: #3a4e5f
-    font-family: "Open Sans"
-    font-size: 11px
+  & .product-text
+    margin: 5px 0px 10px 0px
+    color: #333333
+    font-size: 14px
     font-weight: 600
-    line-height: 13px
-    display: flex
 
-  & .checkbox-default
-    display: none
-
-  & .checkbox-custom
-    width: 14px
-    height: 14px
+  & .product-count
     display: flex
-    border-radius: 3px
-    border: 2px solid #ff0000
-    justify-content: center
+    flex-direction: row
     align-items: center
-    flex-shrink: 0
-    margin-right: 8px
-    position: relative
-  
-.checkbox-default:checked + .checkbox-custom::before
-      content: ""
-      width: 14px
-      height: 14px
+    
+    & .product-choose-count
+      margin-left: 10px
+      position: relative
+      cursor: pointer
       display: flex
-      position: absolute
-      background-repeat: no-repeat
-      background-image: url(../img/check-box.svg)
-      left: 0px
+      width: 100%
+
+      & .product-choose-count-choosen
+        display: flex
+        width: 100%
+        height: 35px
+        border: 1px solid rgba(160, 167, 176, 0.1)
+        background-color: rgba(216, 216, 216, 0.2)
+        padding: 0px 30px 0px 10px
+        align-items: center
+        background-image: url(../img/arrows.png)
+        background-position: 96% 50%
+        background-repeat: no-repeat
+      
+      & .product-choose-count-list
+        position: absolute
+        top: 100%
+        width: 100%
+        background: #fff
+        padding: 5px
+        box-shadow: 0 2px 10px rgba(183, 183, 183, 0.5)
+        display: none
+        max-height: 65px
+        overflow-y: auto
+
+        & .product-list-item
+          display: flex
+          height: 30px
+          font-size: 13px
+          color: #333333
+
+  & .product-footer
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-top: 25px
+
+    & .product-footer-left
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      width: 50%
+
+      & .tabs-content-item-label
+
+        & .price
+          color: #333333
+          font-size: 24px
+          font-weight: 700
+        
+        & .currency
+          color: #333333
+          font-size: 18px
+          font-weight: 400
+    
+    & .product-footer-right
+      display: flex
+      width: 50%
+      justify-content: flex-end
+
+      & .item-to-cart
+        width: 173px
+        height: 35px
+        background-color: #ff0000
+        border: none
+        outline: none
+        color: #ffffff
+        font-size: 13px
+        font-weight: 700
+        text-transform: uppercase
+
+        & img
+          margin-right: 5px
+          display: initial
+          width: auto

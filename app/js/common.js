@@ -40,18 +40,38 @@ $(document).ready(function() {
       }
     }
   });
+    // Акционная карусель
+    $(".action-detail__products-carousel.owl-carousel").owlCarousel({
+      loop: true,
+      nav: false,
+      dots: false,
+      autoplay: false,
+      margin: 5,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 0
+        },
+        768: {
+          items: 3
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
 
   // Селекты
-  $(".item-choose-count").on("click", function() {
+  $(".product-count").on("click", function() {
     $(this)
-      .find(".item-choose-count-list")
+      .find(".product-choose-count-list")
       .slideToggle();
   });
-  $(".count-list-item").on("click", function() {
+  $(".product-list-item").on("click", function() {
     var thisText = $(this).text();
     $(this)
-      .parent(".item-choose-count-list")
-      .siblings(".item-choose-count-choosen")
+      .parent(".product-choose-count-list")
+      .siblings(".product-choose-count-choosen")
       .text(thisText);
   });
 
@@ -114,28 +134,15 @@ $(document).ready(function() {
 
   $(".menu-overlay").on("click", function() {
     $(".mobile-menu").click();
-    $(".mobile-menu .hamburger").toggleClass("is-active");
+    $(".mobile-menu .hamburger").toggleClass('is-active');
   });
 
   // Блокирую хлебную крошку на текущей странице
-  $(".breadcrumb-item.current")
-    .find(".breadcrumb-link")
-    .attr("href", "javascript:void(0)");
+    $('.breadcrumb-item.current').find('.breadcrumb-link').attr('href', 'javascript:void(0)');
 
-  $(".partners-content__tabs .partners-tab").on("click", function() {
-    $(".partners-content__tabs .partners-tab").removeClass("active");
-    $(this).addClass("active");
+  $('.partners-content__tabs .partners-tab').on('click', function(){
+    $('.partners-content__tabs .partners-tab').removeClass('active');
+    $(this).addClass('active');
   });
 
-  // Скрываю label когда input активен
-  $(" .label .input").on("click", function() {
-    $(this)
-      .siblings("label").css({'opacity':'0', 'transition':'.2s ease-in-out'});
-  });
-  $(".label .input").on("blur", function() {
-    if ($(this).val().length == "") {
-      $(this)
-        .siblings("label").css({'opacity':'1', 'transition':'.2s ease-in-out'});
-    }
-  });
 });
