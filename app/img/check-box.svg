@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="11px" viewBox="0 0 12 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>check-box</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Контакты" transform="translate(-444.000000, -1725.000000)" fill-rule="nonzero">
+            <g id="check-box" transform="translate(444.000000, 1725.000000)">
+                <polygon id="Rectangle" fill="#E6E6E6" points="7.33867356 0 12 0 12 6.22129786 7.33867356 6.22129786"></polygon>
+                <polygon id="Shape" fill="#FF0000" points="1.81111111 5.52222222 0.722222222 6.61111111 4.22222222 10.1111111 12 2.33333333 10.9111111 1.24444444 4.22222222 7.93333333"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
