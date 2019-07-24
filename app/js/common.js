@@ -134,15 +134,28 @@ $(document).ready(function() {
 
   $(".menu-overlay").on("click", function() {
     $(".mobile-menu").click();
-    $(".mobile-menu .hamburger").toggleClass('is-active');
+    $(".mobile-menu .hamburger").toggleClass("is-active");
   });
 
   // Блокирую хлебную крошку на текущей странице
-    $('.breadcrumb-item.current').find('.breadcrumb-link').attr('href', 'javascript:void(0)');
+  $(".breadcrumb-item.current")
+    .find(".breadcrumb-link")
+    .attr("href", "javascript:void(0)");
 
-  $('.partners-content__tabs .partners-tab').on('click', function(){
-    $('.partners-content__tabs .partners-tab').removeClass('active');
-    $(this).addClass('active');
+  $(".partners-content__tabs .partners-tab").on("click", function() {
+    $(".partners-content__tabs .partners-tab").removeClass("active");
+    $(this).addClass("active");
   });
 
+  // Скрываю label когда input активен
+  $(" .label .input").on("click", function() {
+    $(this)
+      .siblings("label").css({'opacity':'0', 'transition':'.2s ease-in-out'});
+  });
+  $(".label .input").on("blur", function() {
+    if ($(this).val().length == "") {
+      $(this)
+        .siblings("label").css({'opacity':'1', 'transition':'.2s ease-in-out'});
+    }
+  });
 });
