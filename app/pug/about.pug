@@ -1,0 +1,172 @@
+extends blocks/_layout
+append content
+	-
+		var catalog = [
+			'Автосвет',
+			'Светодиодные лампы',
+			'Автотовары YASHA',
+			'Ароматизаторы',
+			'АвтоЭлектроника',
+			'Уход за автомобилем',
+			'Интструмент',
+			'Щетки стеклоочистителя',
+			'Автохимия',
+			'Ксенон',
+			'Свет автомобильный',
+			'АвтоАксессуары',
+			'Световое оборудование',
+			'Хомуты, изолента, скотч',
+			'Принадлежности для шиномонтажа',
+		];
+
+		var news = [
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			}
+		];
+
+		var nav = [
+			'Главная',
+			'О компании',
+			'Бренды',
+			'Клиентам',
+			'Акции',
+			'Контакты',
+			'Новости'
+		];
+
+	main.main
+		.main__content
+			.main__left-content
+				.left-content-container
+					.left-containe-logo
+						a(href="")
+							img.logo-img(src="img/logo.png", alt="Logo")
+							span.logo-text Торговый дом «Беру»
+					.left-container-catalog
+						h3.title Каталог
+						ul.catalog-list
+							each item in catalog
+								li.catalog-list-item
+									a.catalog-item-link(href="")
+										span=item
+										img(src="img/catalog-item-arr.png", alt="")
+					.left-container-news
+						h3.title Новости
+						.news-list
+							each item in news
+								.news-item
+									a.news-item__img(href="")
+										img(src=item.img, alt=item.name)
+									a.news-item__name(href="")=item.name
+									a.news-item__date(href="")=item.date
+							a.show-all-news-btn(href="") Все новости
+			.main__right-content
+				.right-content__header.right-container
+					.content-header-search.big-search
+						form(action="")
+							input.seach-input(type="text" placeholder="Поиск по сайту")
+							button.search-btn
+								img(src="img/search-ico.png", alt="Search ico")
+				.right-content__breadcrumbs
+					ul(class="breadcrumb-list")
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link" href="") Главная /
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link current" href="") О компании
+				.change-background
+					.right-content__main-content.right-container
+						h1(class="pages-title") О компании
+						.about-content
+							.about-top-content
+								.about-top-image
+									img(src="img/beru.png", alt="")
+								.about-top-text
+									h2(class="about-title") Торговый дом "БЕРУ"
+									p(class="about-text") Компания, специализирующаяся на оптовых продажах  в России и странах СНГ широкого спектра автоаксессуаров,
+										| инструментов и ароматизаторов. Большой ассортимент эксклюзивной продукции, официальным поставщиком которой
+										| на территории России является ТД «БЕРУ», представлен самыми известными и авторитетными брендами. Наша компания
+										| предлагает товар с уникальными техническими характеристиками, самые новейшие разработки, отвечающие международным стандартам.
+							.about-list-content
+								p.list-title Сегодня Торговый дом "БЕРУ" - это:
+								ul.about-list
+									li(class="about-list-item")
+										span Поставка автоаксессуаров оптом, ароматизаторов и инструментов;
+									li(class="about-list-item")
+										span Отлаженная система доставки в любой регион;
+									li(class="about-list-item")
+										span Безупречное качество товара;
+									li(class="about-list-item")
+										span Гарантийное и послегарантийное обслуживание;
+									li(class="about-list-item")
+										span Консультации;
+									li(class="about-list-item")
+										span Индивидуальный подход к каждому клиенту;
+									li(class="about-list-item")
+										span Изготовление по Вашему эскизному проекту (техническому заданию) изделий с наилучшими техническими и ценовыми характеристиками;
+									li(class="about-list-item")
+										span Гибкие системы оплаты.
+							.about-text-content
+								p(class="about-text") Торговый Дом «БЕРУ» всегда стремился  к тому, чтобы его клиенты занимали лидирующие позиции на рынке автомобильных
+									| аксессуаров. Поэтому товарооборот компании постоянно растет. Сегодня по этому показателю компания входит в пятерку лидеров среди
+									| поставщиков автомобильного оборудования и автоаксессуаров в России, странах СНГ.
+								p(class="about-text") В основе деятельности Торговый Дом «БЕРУ»  - ответственность и порядочность в отношениях с клиентами и партнерами
+									| - производителями, индивидуальный подход к каждому клиенту и гарантия качества. Обратившись в Торговый Дом «БЕРУ», можете быть уверены
+									| - Вы не один на один со своими проблемами. Торговый Дом «БЕРУ»  - надежный партнер, всегда готовый прийти на помощь.
+								p(class="about-text bold") Головное предприятие компании – Торгового Дома «БЕРУ» и отдел по работе с партнерами компании и производителями
+									| - находится в Москве. Оснащенный по европейским стандартам центральный склад, и демонстрационный зал компании расположены в
+									| непосредственной близости от офиса.
+							.about-contacts-block
+								p(class="about-text big") Наш адрес:<br>
+									span Шарикоподшипниковская ул., 38, стр. 1, Москва, Россия, 107113
+								.about-map
+									img(src="img/map.png", alt="")
+				.right-content-subscription
+					.content-subscription.right-container
+						span.right-content-subscription-text Подписаться на новостную рассылку
+						form.right-content-subscription-form(action="")
+							input.subscription-input(type="text" placeholder="Введите свою электроную почту")
+							button.subscription-btn 
+								img(src="img/red-right-arr.png", alt="Subscription btn")
+				.right-content-footer.right-container
+					.right-content-footer-sitemap
+						h4.title Карта сайта
+						.footer-sitemap-block
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Главная
+									li
+										a(href="") О компании
+									li
+										a(href="") Бренды
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Клиентам
+									li
+										a(href="") Акции
+									li
+										a(href="") Контакты
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Новости
+					.right-content-footer-contacts
+						h4.title Наш адрес
+						p.footer-contacts-text 115088, г. Москва, ул. Южнопортовая, д. 9, стр. 10. Ближайшее метро: «Кожуховская».
+						p.footer-contacts-text
+							span +7 495 22-33-55-4
+							span Пн-Пт с 08-00 до 17-00
