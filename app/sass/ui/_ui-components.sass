@@ -327,3 +327,72 @@ select, input, textarea
       background-repeat: no-repeat
       background-image: url(../img/check-box.svg)
       left: 0px
+
+.pagination
+  display: flex
+  width: 100%
+  align-items: center
+
+  &-list
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-direction: row
+    margin-left: -10px
+
+    & .pagination-list-item
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-left: 10px
+      border: 1px solid rgba(151, 151, 151, 0.5)
+      color: rgba(160, 167, 176, 0.5)
+      font-family: "Open Sans"
+      font-size: 14px
+      font-weight: 600
+      transition: .1s ease-in-out
+
+      & .pagination-item-link
+        display: flex
+        width: 100%
+        height: 100%
+        justify-content: center
+        align-items: center
+        height: 35px
+        padding: 0px 15px
+        transition: .1s ease-in-out
+
+      &:hover
+        background-color: #d0021b
+        color: #ffffff
+        transition: .1s ease-in-out
+      
+      &.prev
+        border: none
+        background-color: #1a2533
+        color: #ffffff
+        font-family: "Open Sans"
+        font-size: 13px
+        font-weight: 700
+        text-transform: uppercase
+
+        & .pagination-item-link
+          & img
+            margin-right: 5px
+        
+      &.next
+        border: none
+        background-color: #1a2533
+        color: #ffffff
+        font-family: "Open Sans"
+        font-size: 13px
+        font-weight: 700
+        text-transform: uppercase
+
+        & .pagination-item-link
+          & img
+            margin-left: 5px
+            transform: rotate(180deg)
+
+      
