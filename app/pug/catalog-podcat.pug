@@ -1,0 +1,187 @@
+extends blocks/_layout
+append content
+	-
+		var catalog = [
+			'Автосвет',
+			'Светодиодные лампы',
+			'Автотовары YASHA',
+			'Ароматизаторы',
+			'АвтоЭлектроника',
+			'Уход за автомобилем',
+			'Интструмент',
+			'Щетки стеклоочистителя',
+			'Автохимия',
+			'Ксенон',
+			'Свет автомобильный',
+			'АвтоАксессуары',
+			'Световое оборудование',
+			'Хомуты, изолента, скотч',
+			'Принадлежности для шиномонтажа',
+		];
+
+		var news = [
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			}
+		];
+
+		var nav = [
+			'Главная',
+			'О компании',
+			'Бренды',
+			'Клиентам',
+			'Акции',
+			'Контакты',
+			'Новости'
+		];
+
+		var elements = [
+			{
+				img: 'img/img-cat1.png',
+				name: 'Автоаксессуары',
+				count: '[Количество товаров 266]',
+			},
+			{
+				img: 'img/img-cat2.png',
+				name: 'Автосвет',
+				count: '[Количество товаров 266]',
+			},
+			{
+				img: 'img/img-cat3.png',
+				name: 'Автохимия',
+				count: '[Количество товаров 88]',
+			},
+			{
+				img: 'img/img-cat4.png',
+				name: 'Ароматизаторы',
+				count: '[Количество товаров 34]',
+			},
+			{
+				img: 'img/img-cat5.png',
+				name: 'Интструмент',
+				count: '[Количество товаров 75]',
+			},
+			{
+				img: 'img/img-cat6.png',
+				name: 'Щетки стеклоочистителя',
+				count: '[Количество товаров 51]',
+			},
+			{
+				img: 'img/img-cat7.png',
+				name: 'Товары для ухода за автомобилем',
+				count: '[Количество товаров 62]',
+			},
+			{
+				img: 'img/img-cat8.png',
+				name: 'ТОВАРЫ ДЛЯ РЕМОНТА И СЕРВИСА',
+				count: '[Количество товаров 51]',
+			},
+			{
+				img: 'img/img-cat9.png',
+				name: 'ЭЛЕКТРОНИКА И ЭЛЕКТРОТЕХНИКА АВТОМОБИЛЬНАЯ',
+				count: '[Количество товаров 88]',
+			}
+		];
+
+	main.main
+		.main__content
+			.main__left-content
+				.left-content-container
+					.left-containe-logo
+						a(href="")
+							img.logo-img(src="img/logo.png", alt="Logo")
+							span.logo-text Торговый дом «Беру»
+					.left-container-catalog
+						h3.title Каталог
+						ul.catalog-list
+							each item in catalog
+								li.catalog-list-item
+									a.catalog-item-link(href="")
+										span=item
+										img(src="img/catalog-item-arr.png", alt="")
+					.left-container-news
+						h3.title Новости
+						.news-list
+							each item in news
+								.news-item
+									a.news-item__img(href="")
+										img(src=item.img, alt=item.name)
+									a.news-item__name(href="")=item.name
+									a.news-item__date(href="")=item.date
+							a.show-all-news-btn(href="") Все новости
+			.main__right-content
+				.right-content__header.right-container
+					.content-header-search.big-search
+						form(action="")
+							input.seach-input(type="text" placeholder="Поиск по сайту")
+							button.search-btn
+								img(src="img/search-ico.png", alt="Search ico")
+				.right-content__breadcrumbs
+					ul(class="breadcrumb-list")
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link" href="") Главная /
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link current" href="") Каталог
+				.change-background
+					.right-content__main-content.right-container
+						h1(class="pages-title") Аксессуары автомобильные
+						.catalog-podcat-content
+							.catalog-podcat__list
+								each item in elements
+									.catalog-podcat-item
+										.catalog-podcat-item__count
+											img(src="img/red-check.png", alt="")
+											span=item.count
+										.catalog-podcat-item__image
+											img(src=item.img, alt=item.name)
+										.catalog-podcat-item__content
+											a(href="" class="catalog-podcat__content-name")=item.name
+				.right-content-subscription
+					.content-subscription.right-container
+						span.right-content-subscription-text Подписаться на новостную рассылку
+						form.right-content-subscription-form(action="")
+							input.subscription-input(type="text" placeholder="Введите свою электроную почту")
+							button.subscription-btn 
+								img(src="img/red-right-arr.png", alt="Subscription btn")
+				.right-content-footer.right-container
+					.right-content-footer-sitemap
+						h4.title Карта сайта
+						.footer-sitemap-block
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Главная
+									li
+										a(href="") О компании
+									li
+										a(href="") Бренды
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Клиентам
+									li
+										a(href="") Акции
+									li
+										a(href="") Контакты
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Новости
+					.right-content-footer-contacts
+						h4.title Наш адрес
+						p.footer-contacts-text 115088, г. Москва, ул. Южнопортовая, д. 9, стр. 10. Ближайшее метро: «Кожуховская».
+						p.footer-contacts-text
+							span +7 495 22-33-55-4
+							span Пн-Пт с 08-00 до 17-00
