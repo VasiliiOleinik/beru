@@ -155,4 +155,42 @@ $(document).ready(function() {
         .siblings("label").css({'opacity':'1', 'transition':'.2s ease-in-out'});
     }
   });
+
+  // Сортировки
+  $(".choose-sort").on("click", function() {
+    $(this)
+      .find(".choose-sort-list")
+      .slideToggle();
+  });
+  $(".choose-sort-list-item").on("click", function() {
+    var thisText = $(this).text();
+    $(this)
+      .parent(".choose-sort-list")
+      .siblings(".choose-sort-choosen")
+      .text(thisText);
+  });
+  $(".show-choose").on("click", function() {
+    $(this)
+      .find(".show-choose-list")
+      .slideToggle();
+  });
+  $(".show-choose-list-item").on("click", function() {
+    var thisText = $(this).text();
+    $(this)
+      .parent(".show-choose-list")
+      .siblings(".show-choose-schoosen")
+      .text(thisText);
+  });
+
+  // Переключение видов
+
+  $('.tile-view').on('click', function(){
+    $('.list-view').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.list-view').on('click', function(){
+    $('.tile-view').removeClass('active');
+    $(this).addClass('active');
+  });
+
 });

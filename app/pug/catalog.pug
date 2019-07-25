@@ -1,0 +1,303 @@
+extends blocks/_layout
+append content
+	-
+		var catalog = [
+			'Автосвет',
+			'Светодиодные лампы',
+			'Автотовары YASHA',
+			'Ароматизаторы',
+			'АвтоЭлектроника',
+			'Уход за автомобилем',
+			'Интструмент',
+			'Щетки стеклоочистителя',
+			'Автохимия',
+			'Ксенон',
+			'Свет автомобильный',
+			'АвтоАксессуары',
+			'Световое оборудование',
+			'Хомуты, изолента, скотч',
+			'Принадлежности для шиномонтажа',
+		];
+
+		var news = [
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			}
+		];
+
+		var nav = [
+			'Главная',
+			'О компании',
+			'Бренды',
+			'Клиентам',
+			'Акции',
+			'Контакты',
+			'Новости'
+		];
+
+		var prodCout = [
+			'1 комплект',
+			'2 комплект',
+			'3 комплект',
+			'4 комплект',
+			'5 комплект',
+		];
+
+		var products = [
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '00000006721',
+				description: 'Щетка для снега cо скребком "black&blue" поролоновая ручка',
+				count: '1 комплект',
+				price: '405',
+				currency: '₽',
+			},
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '00000006721',
+				description: 'Щетка для снега cо скребком "black&blue" поролоновая ручка',
+				price: '405',
+				currency: '₽',
+			},
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '00000006721',
+				description: 'Автосвет',
+				count: '1 комплект',
+				price: '405',
+				currency: '₽',
+			},
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '2222222222222',
+				description: 'Автосвет',
+				price: '405',
+				currency: '€',
+			},
+			 {
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '333333333333',
+				description: 'Принадлежности для шиномонтажа',
+				count: '1 комплект',
+				price: '405',
+				currency: '₴',
+			},
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '33333333',
+				description: 'Принадлежности для шиномонтажа',
+				price: '405',
+				currency: '₴',
+			},
+		];
+
+	main.main
+		.main__content
+			.main__left-content
+				.left-content-container
+					.left-containe-logo
+						a(href="")
+							img.logo-img(src="img/logo.png", alt="Logo")
+							span.logo-text Торговый дом «Беру»
+					.left-container-catalog
+						h3.title Каталог
+						ul.catalog-list
+							each item in catalog
+								li.catalog-list-item
+									a.catalog-item-link(href="")
+										span=item
+										img(src="img/catalog-item-arr.png", alt="")
+					.left-container-news
+						h3.title Новости
+						.news-list
+							each item in news
+								.news-item
+									a.news-item__img(href="")
+										img(src=item.img, alt=item.name)
+									a.news-item__name(href="")=item.name
+									a.news-item__date(href="")=item.date
+							a.show-all-news-btn(href="") Все новости
+			.main__right-content
+				.right-content__header.right-container
+					.content-header-search.big-search
+						form(action="")
+							input.seach-input(type="text" placeholder="Поиск по сайту")
+							button.search-btn
+								img(src="img/search-ico.png", alt="Search ico")
+				.right-content__breadcrumbs
+					ul(class="breadcrumb-list")
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link" href="") Главная /
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link" href="") Аксессуары /
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link current" href="") Аксессуары "AUTOBAN" (Ю.Корея)
+				.change-background
+					.right-content__main-content.right-container
+						h1(class="pages-title no-margin-bottom") Аксессуары "AUTOBAN" (Ю.Корея)
+						.catalog-content
+							.page-settings
+								.page-settings-left
+									.page-settings-sort
+										span(class="setting-name") Сортировка
+										.choose-sort
+											.choose-sort-choosen Рекомендуемые
+											ul(class="choose-sort-list")
+												li(class="choose-sort-list-item") Рекомендуемые
+												li(class="choose-sort-list-item") Нерекомендуемые
+												li(class="choose-sort-list-item") Желательные
+												li(class="choose-sort-list-item") Нежелательные
+									.page-settings-show
+										span(class="setting-name") Показано:
+										span(class="setting-show-showed") 1-12 товаров из 24
+									.page-setting-choose-show
+										span(class="setting-name") Показать
+										.show-choose
+											.show-choose-schoosen 3
+											ul(class="show-choose-list")
+												li(class="show-choose-list-item") 3
+												li(class="show-choose-list-item") 6
+												li(class="show-choose-list-item") 9
+												li(class="show-choose-list-item") 12
+								.page-settings-right
+									.tile-view.active
+										img(src="img/tile-view.png", alt="")
+									.list-view
+										img(src="img/list-view.png", alt="")
+
+							.catalog-content__list
+								each item in products
+									.product
+										img.product-image(src=item.img, alt=item.name)
+										p.product-label Артикул:
+											span=item.art
+										p.product-label Код товара:
+											span=item.code
+										p.product-text=item.description
+										.product-count
+											p.product-label.bold Количество:
+											.product-choose-count
+												span.product-choose-count-choosen
+												ul.product-choose-count-list
+													each item in prodCout
+														li.product-list-item=item
+										.product-footer
+											.product-footer-left
+												p.product-label.bold Цена:
+													span.price=item.price
+													span.currency=item.currency
+											.product-footer-right
+												button.item-to-cart
+													img(src="img/white-cart-ico.png", alt="White cart")
+													| В корзину
+							.page-settings.need-top-border
+								.page-settings-left
+									.page-settings-sort
+										span(class="setting-name") Сортировка
+										.choose-sort
+											.choose-sort-choosen Рекомендуемые
+											ul(class="choose-sort-list")
+												li(class="choose-sort-list-item") Рекомендуемые
+												li(class="choose-sort-list-item") Нерекомендуемые
+												li(class="choose-sort-list-item") Желательные
+												li(class="choose-sort-list-item") Нежелательные
+									.page-settings-show
+										span(class="setting-name") Показано:
+										span(class="setting-show-showed") 1-12 товаров из 24
+									.page-setting-choose-show
+										span(class="setting-name") Показать
+										.show-choose
+											.show-choose-schoosen 3
+											ul(class="show-choose-list")
+												li(class="show-choose-list-item") 3
+												li(class="show-choose-list-item") 6
+												li(class="show-choose-list-item") 9
+												li(class="show-choose-list-item") 12
+								.page-settings-right
+									.tile-view.active
+										img(src="img/tile-view.png", alt="")
+									.list-view
+										img(src="img/list-view.png", alt="")
+										
+							.pagination
+								ul.pagination-list
+									li.pagination-list-item.prev
+										a(class="pagination-item-link" href="")
+											img(src="img/arrow-left.png", alt="")
+											span Назад
+									li.pagination-list-item
+										a(class="pagination-item-link" href="") 1
+									li.pagination-list-item
+										a(class="pagination-item-link" href="") 2
+									li.pagination-list-item
+										a(class="pagination-item-link" href="") 3
+									li.pagination-list-item
+										a(class="pagination-item-link" href="") 4
+									li.pagination-list-item.ellipsis
+										a(class="pagination-item-link" href="") ...
+									li.pagination-list-item
+										a(class="pagination-item-link" href="") 11
+									li.pagination-list-item.next
+										a(class="pagination-item-link" href="")
+											span Вперед
+											img(src="img/arrow-left.png", alt="")
+
+
+						a(class="come-back-btn" href="")
+							img(src="img/arrow-left.png", alt="")
+							span Вернуться назад
+				.right-content-subscription
+					.content-subscription.right-container
+						span.right-content-subscription-text Подписаться на новостную рассылку
+						form.right-content-subscription-form(action="")
+							input.subscription-input(type="text" placeholder="Введите свою электроную почту")
+							button.subscription-btn 
+								img(src="img/red-right-arr.png", alt="Subscription btn")
+				.right-content-footer.right-container
+					.right-content-footer-sitemap
+						h4.title Карта сайта
+						.footer-sitemap-block
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Главная
+									li
+										a(href="") О компании
+									li
+										a(href="") Бренды
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Клиентам
+									li
+										a(href="") Акции
+									li
+										a(href="") Контакты
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Новости
+					.right-content-footer-contacts
+						h4.title Наш адрес
+						p.footer-contacts-text 115088, г. Москва, ул. Южнопортовая, д. 9, стр. 10. Ближайшее метро: «Кожуховская».
+						p.footer-contacts-text
+							span +7 495 22-33-55-4
+							span Пн-Пт с 08-00 до 17-00s
