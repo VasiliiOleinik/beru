@@ -1,0 +1,223 @@
+extends blocks/_layout
+append content
+	-
+		var catalog = [
+			'Автосвет',
+			'Светодиодные лампы',
+			'Автотовары YASHA',
+			'Ароматизаторы',
+			'АвтоЭлектроника',
+			'Уход за автомобилем',
+			'Интструмент',
+			'Щетки стеклоочистителя',
+			'Автохимия',
+			'Ксенон',
+			'Свет автомобильный',
+			'АвтоАксессуары',
+			'Световое оборудование',
+			'Хомуты, изолента, скотч',
+			'Принадлежности для шиномонтажа',
+		];
+
+		var news = [
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			}
+		];
+
+		var nav = [
+			'Главная',
+			'О компании',
+			'Бренды',
+			'Клиентам',
+			'Акции',
+			'Контакты',
+			'Новости'
+		];
+
+		var newsList = [
+			{
+				img: "img/no-logo.png",
+				date: '30.06.2019',
+				name: 'ТД «БЕРУ» запускает новые сайты!',
+				description: 'Рады Вам сообщить что ТД «БЕРУ» запускает линейку промо сайтов для нескольких групп своих продуктов. ',
+			},
+			{
+				img: "img/no-logo.png",
+				date: '30.06.2019',
+				name: 'ТД «БЕРУ» запускает новые сайты!',
+				description: 'Рады Вам сообщить что ТД «БЕРУ» запускает линейку промо сайтов для нескольких групп своих продуктов. ',
+			},
+			{
+				img: "img/no-logo.png",
+				date: '30.06.2019',
+				name: 'ТД «БЕРУ» запускает новые сайты!',
+				description: 'Рады Вам сообщить что ТД «БЕРУ» запускает линейку промо сайтов для нескольких групп своих продуктов. ',
+			},
+			{
+				img: "img/no-logo.png",
+				date: '30.06.2019',
+				name: 'ТД «БЕРУ» запускает новые сайты!',
+				description: 'Рады Вам сообщить что ТД «БЕРУ» запускает линейку промо сайтов для нескольких групп своих продуктов. ',
+			},
+			{
+				img: "img/no-logo.png",
+				date: '30.06.2019',
+				name: 'ТД «БЕРУ» запускает новые сайты!',
+				description: 'Рады Вам сообщить что ТД «БЕРУ» запускает линейку промо сайтов для нескольких групп своих продуктов. ',
+			},
+			{
+				img: "img/no-logo.png",
+				date: '30.06.2019',
+				name: 'ТД «БЕРУ» запускает новые сайты!',
+				description: 'Рады Вам сообщить что ТД «БЕРУ» запускает линейку промо сайтов для нескольких групп своих продуктов. ',
+			},
+			{
+				img: "img/no-logo.png",
+				date: '30.06.2019',
+				name: 'ТД «БЕРУ» запускает новые сайты!',
+				description: 'Рады Вам сообщить что ТД «БЕРУ» запускает линейку промо сайтов для нескольких групп своих продуктов. ',
+			},
+			{
+				img: "img/no-logo.png",
+				date: '30.06.2019',
+				name: 'ТД «БЕРУ» запускает новые сайты!',
+				description: 'Рады Вам сообщить что ТД «БЕРУ» запускает линейку промо сайтов для нескольких групп своих продуктов. ',
+			},
+			{
+				img: "img/no-logo.png",
+				date: '30.06.2019',
+				name: 'ТД «БЕРУ» запускает новые сайты!',
+				description: 'Рады Вам сообщить что ТД «БЕРУ» запускает линейку промо сайтов для нескольких групп своих продуктов. ',
+			},
+		];
+
+	main.main
+		.main__content
+			.main__left-content
+				.left-content-container
+					.left-containe-logo
+						a(href="")
+							img.logo-img(src="img/logo.png", alt="Logo")
+							span.logo-text Торговый дом «Беру»
+					.left-container-catalog
+						h3.title Каталог
+						ul.catalog-list
+							each item in catalog
+								li.catalog-list-item
+									a.catalog-item-link(href="")
+										span=item
+										img(src="img/catalog-item-arr.png", alt="")
+					.left-container-news
+						h3.title Новости
+						.news-list
+							each item in news
+								.news-item
+									a.news-item__img(href="")
+										img(src=item.img, alt=item.name)
+									a.news-item__name(href="")=item.name
+									a.news-item__date(href="")=item.date
+							a.show-all-news-btn(href="") Все новости
+			.main__right-content
+				.right-content__header.right-container
+					.content-header-search.big-search
+						form(action="")
+							input.seach-input(type="text" placeholder="Поиск по сайту")
+							button.search-btn
+								img(src="img/search-ico.png", alt="Search ico")
+				.right-content__breadcrumbs
+					ul(class="breadcrumb-list")
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link" href="") Главная /
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link current" href="") Новости
+				.change-background
+					.right-content__main-content.right-container
+						h1(class="pages-title") Новости
+						.news-content
+							.news-content__list
+								each item in newsList
+									.news-content-item
+										.news-item__image
+											img(src=item.img, alt=item.name)
+										.news-item__content
+											p(class="news-item__content-date")=item.date
+											p(class="news-item__content-name")=item.name
+											p(class="news-item__content-description")=item.description
+											a(href="" class="read-news-btn") Читать статью
+							.pagination
+								ul.pagination-list
+									li.pagination-list-item.prev
+										a(href="" class="pagination-item-link")
+											img(src="img/arrow-left.png", alt="")
+											span Назад
+									li.pagination-list-item
+										a(href="" class="pagination-item-link") 1
+									li.pagination-list-item
+										a(href="" class="pagination-item-link") 2
+									li.pagination-list-item
+										a(href="" class="pagination-item-link") 3
+									li.pagination-list-item
+										a(href="" class="pagination-item-link") 4
+									li.pagination-list-item.ellipsis
+										a(href="" class="pagination-item-link") ...
+									li.pagination-list-item
+										a(href="" class="pagination-item-link") 11
+									li.pagination-list-item.next
+										a(href="" class="pagination-item-link")
+											span Вперед
+											img(src="img/arrow-left.png", alt="")
+
+
+						a(class="come-back-btn" href="")
+							img(src="img/arrow-left.png", alt="")
+							span Вернуться назад
+				.right-content-subscription
+					.content-subscription.right-container
+						span.right-content-subscription-text Подписаться на новостную рассылку
+						form.right-content-subscription-form(action="")
+							input.subscription-input(type="text" placeholder="Введите свою электроную почту")
+							button.subscription-btn 
+								img(src="img/red-right-arr.png", alt="Subscription btn")
+				.right-content-footer.right-container
+					.right-content-footer-sitemap
+						h4.title Карта сайта
+						.footer-sitemap-block
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Главная
+									li
+										a(href="") О компании
+									li
+										a(href="") Бренды
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Клиентам
+									li
+										a(href="") Акции
+									li
+										a(href="") Контакты
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Новости
+					.right-content-footer-contacts
+						h4.title Наш адрес
+						p.footer-contacts-text 115088, г. Москва, ул. Южнопортовая, д. 9, стр. 10. Ближайшее метро: «Кожуховская».
+						p.footer-contacts-text
+							span +7 495 22-33-55-4
+							span Пн-Пт с 08-00 до 17-00
