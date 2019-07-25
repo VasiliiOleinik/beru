@@ -1,0 +1,247 @@
+extends blocks/_layout
+append content
+	-
+		var catalog = [
+			'Автосвет',
+			'Светодиодные лампы',
+			'Автотовары YASHA',
+			'Ароматизаторы',
+			'АвтоЭлектроника',
+			'Уход за автомобилем',
+			'Интструмент',
+			'Щетки стеклоочистителя',
+			'Автохимия',
+			'Ксенон',
+			'Свет автомобильный',
+			'АвтоАксессуары',
+			'Световое оборудование',
+			'Хомуты, изолента, скотч',
+			'Принадлежности для шиномонтажа',
+		];
+
+		var news = [
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			}
+		];
+
+		var nav = [
+			'Главная',
+			'О компании',
+			'Бренды',
+			'Клиентам',
+			'Акции',
+			'Контакты',
+			'Новости'
+		];
+
+		var prodCout = [
+			'1 комплект',
+			'2 комплект',
+			'3 комплект',
+			'4 комплект',
+			'5 комплект',
+		];
+
+		var products = [
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '00000006721',
+				description: 'Щетка для снега cо скребком "black&blue" поролоновая ручка',
+				count: '1 комплект',
+				price: '405',
+				currency: '₽',
+			},
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '00000006721',
+				description: 'Щетка для снега cо скребком "black&blue" поролоновая ручка',
+				price: '405',
+				currency: '₽',
+			},
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '00000006721',
+				description: 'Автосвет',
+				count: '1 комплект',
+				price: '405',
+				currency: '₽',
+			}
+		];
+
+		var detailProdImg = [
+			'img/product1.png',
+			'img/slide.png',
+			'img/slide-img3.jpg',
+			'img/product1.png',
+			'img/product1.png',
+		];
+
+		var detailprod = [
+			{
+				name: 'Щетка для удаления пыли "Li-Sa" из микрофибры, поролоновая раздвижная ручка на металлической основе (51-62 см), в чехле',
+				art: '39907',
+				unit: 'шт.', 
+				weight: '608 (грамм)',
+				count: '40',
+				country: 'Китай',
+				description: 'Щетка для удаления пыли позволяет легко и быстро удалить пыль с большой поверхности. Хорошо впитывает влагу и не оставляет царапин. Предназначена для уборки внутреннего пространства автомобилей. Подходит для удаления пыли с лакокрасочной поверхности транспортных средств, а также, для уборки жилых и офисных помещений. Густой ворс из микрофибры. Удобная раздвижная рукоятка 51-62 см. '
+			}
+		];
+
+	main.main
+		.main__content
+			.main__left-content
+				.left-content-container
+					.left-containe-logo
+						a(href="")
+							img.logo-img(src="img/logo.png", alt="Logo")
+							span.logo-text Торговый дом «Беру»
+					.left-container-catalog
+						h3.title Каталог
+						ul.catalog-list
+							each item in catalog
+								li.catalog-list-item
+									a.catalog-item-link(href="")
+										span=item
+										img(src="img/catalog-item-arr.png", alt="")
+					.left-container-news
+						h3.title Новости
+						.news-list
+							each item in news
+								.news-item
+									a.news-item__img(href="")
+										img(src=item.img, alt=item.name)
+									a.news-item__name(href="")=item.name
+									a.news-item__date(href="")=item.date
+							a.show-all-news-btn(href="") Все новости
+			.main__right-content
+				.right-content__header.right-container
+					.content-header-search.big-search
+						form(action="")
+							input.seach-input(type="text" placeholder="Поиск по сайту")
+							button.search-btn
+								img(src="img/search-ico.png", alt="Search ico")
+				.right-content__breadcrumbs
+					ul(class="breadcrumb-list")
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link" href="") Главная /
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link" href="") Аксессуары /
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link" href="")  АвтоАксессуары / 
+						li(class="breadcrumb-item")
+							a(href="" class="breadcrumb-link current") Щетка для удаления пыли "Li-Sa" 
+				.change-background
+					.right-content__main-content.right-container
+						h1(class="pages-title") Щетка для удаления пыли "Li-Sa" 
+						.detail-product-content
+							.detail-product
+								.detail-product-galelry
+									.detail-product-galelry-main-image
+										img(src="img/product1.png", alt="")
+									.detail-product-galelry-carousel.owl-carousel
+										each item in detailProdImg
+											img(src=item, alt="")
+								.detail-product-info
+									each item in detailprod
+										h3(class="detail-product-title")=item.name
+										p(class="detail-product-info-text") Базовая единица:
+											span=item.art
+										p(class="detail-product-info-text") Базовая единица:
+											span=item.unit
+										p(class="detail-product-info-text") Вес:
+											span=item.weight
+										p(class="detail-product-info-text") Количество в упаковке:
+											span=item.count
+										p(class="detail-product-info-text") Страна происхождения:
+											span=item.country
+										p(class="detail-product-info-text description") Дополнительное описание:
+											span=item.description
+										.product-count
+											p.product-label.bold Количество:
+											.product-choose-count
+												span.product-choose-count-choosen
+												ul.product-choose-count-list
+													each item in prodCout
+														li.product-list-item=item
+										a(href="" class="detail-product-request") ЗАПРОСИТЬ ИНФОРМАЦИЮ
+
+							h1(class="pages-title") Похожие товары
+							.detail-product__list.owl-carousel
+								each item in products
+									.product
+										img.product-image(src=item.img, alt=item.name)
+										p.product-label Артикул:
+											span=item.art
+										p.product-label Код товара:
+											span=item.code
+										p.product-text=item.description
+										.product-count
+											p.product-label.bold Количество:
+											.product-choose-count
+												span.product-choose-count-choosen
+												ul.product-choose-count-list
+													each item in prodCout
+														li.product-list-item=item
+										.product-footer
+											.product-footer-left
+												p.product-label.bold Цена:
+													span.price=item.price
+													span.currency=item.currency
+											.product-footer-right
+												button.item-to-cart
+													img(src="img/white-cart-ico.png", alt="White cart")
+													| В корзину
+				.right-content-subscription
+					.content-subscription.right-container
+						span.right-content-subscription-text Подписаться на новостную рассылку
+						form.right-content-subscription-form(action="")
+							input.subscription-input(type="text" placeholder="Введите свою электроную почту")
+							button.subscription-btn 
+								img(src="img/red-right-arr.png", alt="Subscription btn")
+				.right-content-footer.right-container
+					.right-content-footer-sitemap
+						h4.title Карта сайта
+						.footer-sitemap-block
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Главная
+									li
+										a(href="") О компании
+									li
+										a(href="") Бренды
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Клиентам
+									li
+										a(href="") Акции
+									li
+										a(href="") Контакты
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Новости
+					.right-content-footer-contacts
+						h4.title Наш адрес
+						p.footer-contacts-text 115088, г. Москва, ул. Южнопортовая, д. 9, стр. 10. Ближайшее метро: «Кожуховская».
+						p.footer-contacts-text
+							span +7 495 22-33-55-4
+							span Пн-Пт с 08-00 до 17-00s

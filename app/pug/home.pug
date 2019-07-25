@@ -19,6 +19,13 @@ append content
             'Принадлежности для шиномонтажа',
         ];
 
+        var subCatalog = [
+            'Аксессуары автомобильные',
+            'Оплетки рулевого колеса',
+            'Чехлы и накидки на сидения, поддержка поясничная',
+            'Ю.Корея АUTOBAN Аксессуары',
+        ]
+
         var news = [
             {
                 img: 'img/news.jpg',
@@ -111,6 +118,22 @@ append content
             '5 комплект',
         ];
 
+
+        var elements = [
+            {
+                img: 'img/img-cat1.png',
+                name: 'Новинки',
+            },
+            {
+                img: 'img/img-cat2.png',
+                name: 'Хиты',
+            },
+            {
+                img: 'img/img-cat3.png',
+                name: 'Сезонные предложения',
+            },
+        ];
+
         var nav = [
             'Главная',
             'О компании',
@@ -120,6 +143,8 @@ append content
             'Контакты',
             'Новости'
         ];
+
+        
     main.main
         .main__content
             .main__left-content
@@ -136,6 +161,10 @@ append content
                                     a.catalog-item-link(href="")
                                         span=item
                                         img(src="img/catalog-item-arr.png", alt="")
+                                    ul.catalog-sub-list
+                                        each item in subCatalog
+                                            li.catalog-sub-list-item
+                                                a(href="")=item
                     .left-container-news
                         h3.title Новости
                         .news-list
@@ -176,93 +205,102 @@ append content
                                 .slide-info-block
                                     span.slide-info-block-text Щетки -пыльники «LiSa»
                                     img.slide-info-block-image(src="img/lisa-logo.png", alt="")
-                .right-content__tabs.right-container
-                    .right-tabs-block#tabs
-                        ul.right-tabs-block__menu
-                            li.tab.active
-                                a(href="#tab1") Новинки
-                            li.tab
-                                a(href="#tab2") Сезонные предложения
-                            li.tab
-                                a(href="#tab3") Хиты
-                        h4.tab-block-title Новинки       
-                        .right-tabs-block__content#tab1(class="owl-carousel")
-                            each item in tabProdFirst
-                                 .product
-                                    img.product-image(src=item.img, alt=item.name)
-                                    p.product-label Артикул:
-                                        span=item.art
-                                    p.product-label Код товара:
-                                        span=item.code
-                                    p.product-text=item.description
-                                    .product-count
-                                        p.product-label.bold Количество:
-                                        .product-choose-count
-                                            span.product-choose-count-choosen
-                                            ul.product-choose-count-list
-                                                each item in prodCout
-                                                    li.product-list-item=item
-                                    .product-footer
-                                        .product-footer-left
-                                            p.product-label.bold Цена:
-                                                span.price=item.price
-                                                span.currency=item.currency
-                                        .product-footer-right
-                                            button.item-to-cart
-                                                img(src="img/white-cart-ico.png", alt="White cart")
-                                                | В корзину
-                        h4.tab-block-title Сезонные предложения                       
-                        .right-tabs-block__content#tab2(class="owl-carousel")
-                            each item in tabProdSecond
-                                .product
-                                    img.product-image(src=item.img, alt=item.name)
-                                    p.product-label Артикул:
-                                        span=item.art
-                                    p.product-label Код товара:
-                                        span=item.code
-                                    p.product-text=item.description
-                                    .product-count
-                                        p.product-label.bold Количество:
-                                        .product-choose-count
-                                            span.product-choose-count-choosen
-                                            ul.product-choose-count-list
-                                                each item in prodCout
-                                                    li.product-list-item=item
-                                    .product-footer
-                                        .product-footer-left
-                                            p.product-label.bold Цена:
-                                                span.price=item.price
-                                                span.currency=item.currency
-                                        .product-footer-right
-                                            button.item-to-cart
-                                                img(src="img/white-cart-ico.png", alt="White cart")
-                                                | В корзину
-                        h4.tab-block-title Хиты
-                        .right-tabs-block__content#tab3(class="owl-carousel")
-                            each item in tabProdThird
-                                .product
-                                    img.product-image(src=item.img, alt=item.name)
-                                    p.product-label Артикул:
-                                        span=item.art
-                                    p.product-label Код товара:
-                                        span=item.code
-                                    p.product-text=item.description
-                                    .product-count
-                                        p.product-label.bold Количество:
-                                        .product-choose-count
-                                            span.product-choose-count-choosen
-                                            ul.product-choose-count-list
-                                                each item in prodCout
-                                                    li.product-list-item=item
-                                    .product-footer
-                                        .product-footer-left
-                                            p.product-label.bold Цена:
-                                                span.price=item.price
-                                                span.currency=item.currency
-                                        .product-footer-right
-                                            button.item-to-cart
-                                                img(src="img/white-cart-ico.png", alt="White cart")
-                                                | В корзину
+                .right-content__tabs.right-container.slider
+                    .catalog-slider.owl-carousel
+                        each item in elements
+                            .main-catalog-item
+                                .main-catalog-item-img
+                                    a(href="")
+                                        img(src=item.img, alt="")
+                                .main-catalog-item-name
+                                    a(href="")=item.name
+
+                    //- .right-tabs-block#tabs
+                    //-     ul.right-tabs-block__menu
+                    //-         li.tab.active
+                    //-             a(href="#tab1") Новинки
+                    //-         li.tab
+                    //-             a(href="#tab2") Сезонные предложения
+                    //-         li.tab
+                    //-             a(href="#tab3") Хиты
+                    //-     h4.tab-block-title Новинки       
+                    //-     .right-tabs-block__content#tab1(class="owl-carousel")
+                    //-         each item in tabProdFirst
+                    //-              .product
+                    //-                 img.product-image(src=item.img, alt=item.name)
+                    //-                 p.product-label Артикул:
+                    //-                     span=item.art
+                    //-                 p.product-label Код товара:
+                    //-                     span=item.code
+                    //-                 p.product-text=item.description
+                    //-                 .product-count
+                    //-                     p.product-label.bold Количество:
+                    //-                     .product-choose-count
+                    //-                         span.product-choose-count-choosen
+                    //-                         ul.product-choose-count-list
+                    //-                             each item in prodCout
+                    //-                                 li.product-list-item=item
+                    //-                 .product-footer
+                    //-                     .product-footer-left
+                    //-                         p.product-label.bold Цена:
+                    //-                             span.price=item.price
+                    //-                             span.currency=item.currency
+                    //-                     .product-footer-right
+                    //-                         button.item-to-cart
+                    //-                             img(src="img/white-cart-ico.png", alt="White cart")
+                    //-                             | В корзину
+                    //-     h4.tab-block-title Сезонные предложения                       
+                    //-     .right-tabs-block__content#tab2(class="owl-carousel")
+                    //-         each item in tabProdSecond
+                    //-             .product
+                    //-                 img.product-image(src=item.img, alt=item.name)
+                    //-                 p.product-label Артикул:
+                    //-                     span=item.art
+                    //-                 p.product-label Код товара:
+                    //-                     span=item.code
+                    //-                 p.product-text=item.description
+                    //-                 .product-count
+                    //-                     p.product-label.bold Количество:
+                    //-                     .product-choose-count
+                    //-                         span.product-choose-count-choosen
+                    //-                         ul.product-choose-count-list
+                    //-                             each item in prodCout
+                    //-                                 li.product-list-item=item
+                    //-                 .product-footer
+                    //-                     .product-footer-left
+                    //-                         p.product-label.bold Цена:
+                    //-                             span.price=item.price
+                    //-                             span.currency=item.currency
+                    //-                     .product-footer-right
+                    //-                         button.item-to-cart
+                    //-                             img(src="img/white-cart-ico.png", alt="White cart")
+                    //-                             | В корзину
+                    //-     h4.tab-block-title Хиты
+                    //-     .right-tabs-block__content#tab3(class="owl-carousel")
+                    //-         each item in tabProdThird
+                    //-             .product
+                    //-                 img.product-image(src=item.img, alt=item.name)
+                    //-                 p.product-label Артикул:
+                    //-                     span=item.art
+                    //-                 p.product-label Код товара:
+                    //-                     span=item.code
+                    //-                 p.product-text=item.description
+                    //-                 .product-count
+                    //-                     p.product-label.bold Количество:
+                    //-                     .product-choose-count
+                    //-                         span.product-choose-count-choosen
+                    //-                         ul.product-choose-count-list
+                    //-                             each item in prodCout
+                    //-                                 li.product-list-item=item
+                    //-                 .product-footer
+                    //-                     .product-footer-left
+                    //-                         p.product-label.bold Цена:
+                    //-                             span.price=item.price
+                    //-                             span.currency=item.currency
+                    //-                     .product-footer-right
+                    //-                         button.item-to-cart
+                    //-                             img(src="img/white-cart-ico.png", alt="White cart")
+                    //-                             | В корзину
                 .right-content-subscription
                     .content-subscription.right-container
                         span.right-content-subscription-text Подписаться на новостную рассылку

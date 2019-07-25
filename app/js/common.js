@@ -41,7 +41,8 @@ $(document).ready(function() {
     }
   });
     // Акционная карусель
-    $(".action-detail__products-carousel.owl-carousel").owlCarousel({
+    //
+    $(".action-detail__products-carousel.owl-carousel, .detail-product__list.owl-carousel").owlCarousel({
       loop: true,
       nav: false,
       dots: false,
@@ -60,6 +61,53 @@ $(document).ready(function() {
         }
       }
     });
+
+    // Карусель превьюшек
+    $(".detail-product-galelry-carousel.owl-carousel").owlCarousel({
+      loop: true,
+      nav: false,
+      dots: false,
+      autoplay: false,
+      margin: 15,
+      responsive: {
+        0: {
+          items: 2
+        },
+        450: {
+          items: 3
+        },
+        768: {
+          items: 3
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+
+    // Карусель на главной с категориями
+    $(".catalog-slider.owl-carousel").owlCarousel({
+      loop: true,
+      nav: false,
+      dots: false,
+      autoplay: false,
+      margin: 15,
+      responsive: {
+        0: {
+          items: 1
+        },
+        450: {
+          items: 2
+        },
+        768: {
+          items: 3
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+
 
   // Селекты
   $(".product-count").on("click", function() {
@@ -191,6 +239,48 @@ $(document).ready(function() {
   $('.list-view').on('click', function(){
     $('.tile-view').removeClass('active');
     $(this).addClass('active');
+  });
+
+
+  // Галерея
+    $('.detail-product-galelry-carousel img').each(function(i, img){
+      var mainImg = $('.detail-product-galelry-main-image img');
+
+      $(img).on('click', function(){
+          mainImg.attr('src', $(this).attr('src'));
+      });
+    });
+
+  // Выпадающее меню
+    $('.catalog-list-item').each(function(i, elem){
+      $(elem).hover(function(){
+        $(this).find('.catalog-sub-list').slideDown();
+      }, function(){
+        $(this).find('.catalog-sub-list').slideUp();
+      });
+    });
+
+
+
+  // Крошка
+  var breadWidth = $('.breadcrumb-item');
+  breadWidth.each(function(i, elem){
+    if($(elem).width() > 300){
+      $(this).css({ 'white-space':'nowrap',});
+      $(this).find('.breadcrumb-link').css({'max-width':'300px', 'overflow':'hidden'});
+      $(this).append('<span style="color:#fff", padding-left: 5px" class="dots">...</span>');
+
+      if(screen.width < 767){
+        if($(elem).width() >= 150){
+          $(this).find('.breadcrumb-link').css({'max-width':'150px', 'overflow':'hidden'});
+        }
+      }
+      if(screen.width < 550){
+        if($(elem).width() >=100){
+          $(this).find('.breadcrumb-link').css({'max-width':'100px', 'overflow':'hidden'});
+        }
+      }
+    }
   });
 
 });

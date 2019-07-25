@@ -395,5 +395,21 @@ select, input, textarea
             margin-left: 5px
             transform: rotate(180deg)
 
+.right-content__breadcrumbs .breadcrumb-list .breadcrumb-item
+    display: flex
+    align-items: center
+
+@include media( 530 )
+  .pagination-list .pagination-list-item:nth-of-type(5)
+    display: none
+  
+@include media( 430 )
+  .pagination-list .pagination-list-item:nth-of-type(3),
+  .pagination-list .pagination-list-item:nth-of-type(4),
+  .pagination-list .pagination-list-item:nth-of-type(5),
+  .pagination-list .pagination-list-item:nth-of-type(6),
+  .pagination-list .pagination-list-item:nth-of-type(7)
+    display: none
+
 .no-margin-bottom
   margin-bottom: 0px

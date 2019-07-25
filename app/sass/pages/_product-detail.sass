@@ -1,0 +1,143 @@
+.detail-product-content
+	width: 100%
+	display: flex
+	flex-direction: column
+	
+	& .detail-product
+		display: flex
+		width: 100%
+		flex-direction: row
+		box-shadow: 0 2px 10px rgba(183, 183, 183, 0.5)
+		background-color: #ffffff
+		padding: 15px 15px 50px 15px
+		margin-bottom: 35px
+
+		&-galelry
+			width: 50%
+			display: flex
+			flex-direction: column
+
+			&-main-image
+				width: 100%
+				display: flex
+				height: 395px
+				justify-content: center
+				align-items: center
+				margin-bottom: 29px
+				transition: .3s
+
+				& img
+					max-width: 100%
+					transition: .3s
+
+			&-carousel
+				width: 100%
+				height: 125px
+
+				& img
+					width: 125px
+					height: 125px
+					
+				
+		&-info
+			display: flex
+			flex-direction: column
+			width: 50%
+			padding-left: 30px
+
+			& .detail-product-title
+				color: #3a4e5f
+				font-family: "Open Sans"
+				font-size: 18px
+				font-weight: 700
+				margin-bottom: 10px
+
+			& .detail-product-info-text
+				color: #d0021b
+				font-family: "Open Sans"
+				font-size: 14px
+				font-weight: 700
+				margin-bottom: 10px
+
+				& span
+					color: #333333
+					font-family: "Open Sans"
+					font-weight: 600
+					padding-left: 5px
+				
+				&.description
+					display: flex
+					width: 100%
+					flex-direction: column
+
+					& span
+						padding: 0px
+
+			& .product-count
+				display: flex
+				flex-direction: row
+				align-items: center
+				margin-bottom: 20px
+				
+				& .product-choose-count
+					margin-left: 10px
+					position: relative
+					cursor: pointer
+					display: flex
+					width: 100%
+
+				& .product-choose-count-choosen
+					display: flex
+					width: 100%
+					height: 35px
+					border: 1px solid rgba(160, 167, 176, 0.1)
+					background-color: rgba(216, 216, 216, 0.2)
+					padding: 0px 30px 0px 10px
+					align-items: center
+					background-image: url(../img/arrows.png)
+					background-position: 96% 50%
+					background-repeat: no-repeat
+				
+				& .product-choose-count-list
+					position: absolute
+					top: 100%
+					width: 100%
+					background: #fff
+					padding: 5px
+					box-shadow: 0 2px 10px rgba(183, 183, 183, 0.5)
+					display: none
+
+					& .product-list-item
+						display: flex
+						height: 30px
+						font-size: 13px
+						color: #333333
+
+			& .detail-product-request
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 45px
+				background-color: #d0021b
+				color: #ffffff
+				font-family: "Open Sans"
+				font-size: 13px
+				font-weight: 700
+				text-transform: uppercase
+
+	& .detail-product__list
+		margin-bottom: 60px
+
+		& .product
+			height: 435px
+
+@include media( 767 )
+	.detail-product-content .detail-product
+		flex-direction: column
+	.detail-product-content .detail-product-galelry
+		width: 100%
+		margin-bottom: 25px
+	.detail-product-content .detail-product-info
+		width: 100%
+		padding: 0px
