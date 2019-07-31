@@ -37,15 +37,9 @@ append content
                 name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
                 date: '19.09.2019',
             },
-            {
-                img: 'img/news.jpg',
-                name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
-                date: '19.09.2019',
-            }
         ];
 
         var slider = [
-            'img/slide-img1.png',
             'img/slide-img2.jpg',
             'img/slide-img3.jpg',
         ];
@@ -181,22 +175,36 @@ append content
                         button.hamburger.hamburger--slider(type="button")
                             span.hamburger-box
                                 span.hamburger-inner
-                    .content-header-search
+                                span Меню
+                    .content-header-search.big-search
                         form(action="")
                             input.seach-input(type="text" placeholder="Поиск по сайту")
                             button.search-btn
                                 img(src="img/search-ico.png", alt="Search ico")
-                    .content-header-cart
-                        a.main-cart-btn(href="")
-                            img(src="img/cart-ico.png", alt="Cart ico")
-                            p 220
-                                span товаров
-                    .content-header-user
-                        a.main-user-btn(href="")
-                            span.user-name Роман Васерман
-                            p.user-img
-                                img(src="img/user-ico.png", alt="")
-
+                    //- .content-header-cart
+                    //-     a.main-cart-btn(href="")
+                    //-         img(src="img/cart-ico.png", alt="Cart ico")
+                    //-         p 220
+                    //-             span товаров
+                    //- .content-header-user
+                    //-     a.main-user-btn(href="")
+                    //-         span.user-name Роман Васерман
+                    //-         p.user-img
+                    //-             img(src="img/user-ico.png", alt="")
+                .mobile-catalog-section.right-container
+                    .mobile-catalog
+                        h3.title Каталог
+                        ul.mobile-catalog-list
+                            each item in catalog
+                                li.mobile-catalog-list-item
+                                    .mobile-catalog-item-block
+                                        a.mobile-catalog-item-link(href="")=item
+                                        .mobile-catalog-item-img
+                                            img(src="img/catalog-item-arr.png", alt="")
+                                    ul.mobile-catalog-sub-list
+                                        each item in subCatalog
+                                            li.mobile-catalog-sub-list-item
+                                                a(href="")=item
                 .right-content__slider
                     .owl-carousel.main-carousel
                         each item in slider

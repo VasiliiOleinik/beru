@@ -19,6 +19,13 @@ append content
 			'Принадлежности для шиномонтажа',
 		];
 
+		var subCatalog = [
+			'Аксессуары автомобильные',
+			'Оплетки рулевого колеса',
+			'Чехлы и накидки на сидения, поддержка поясничная',
+			'Ю.Корея АUTOBAN Аксессуары',
+		]
+
 		var news = [
 			{
 				img: 'img/news.jpg',
@@ -123,17 +130,36 @@ append content
 							a.show-all-news-btn(href="") Все новости
 			.main__right-content
 				.right-content__header.right-container
+					.mobile-menu
+						button.hamburger.hamburger--slider(type="button")
+							span.hamburger-box
+								span.hamburger-inner
+								span Меню
 					.content-header-search.big-search
 						form(action="")
 							input.seach-input(type="text" placeholder="Поиск по сайту")
 							button.search-btn
 								img(src="img/search-ico.png", alt="Search ico")
+				.mobile-catalog-section.right-container
+					.mobile-catalog
+						h3.title Каталог
+						ul.mobile-catalog-list
+							each item in catalog
+								li.mobile-catalog-list-item
+									.mobile-catalog-item-block
+										a.mobile-catalog-item-link(href="")=item
+										.mobile-catalog-item-img
+											img(src="img/catalog-item-arr.png", alt="")
+									ul.mobile-catalog-sub-list
+										each item in subCatalog
+											li.mobile-catalog-sub-list-item
+												a(href="")=item
 				.right-content__breadcrumbs
 					ul(class="breadcrumb-list")
 						li(class="breadcrumb-item")
 							a(class="breadcrumb-link" href="") Главная /
-						li(class="breadcrumb-item")
-							a(class="breadcrumb-link current" href="") Каталог
+						li(class="breadcrumb-item current")
+							a(class="breadcrumb-link " href="") Каталог
 				.change-background
 					.right-content__main-content.right-container
 						h1(class="pages-title") Аксессуары автомобильные

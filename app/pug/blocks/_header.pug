@@ -16,14 +16,15 @@ header.header
                     each item in nav
                         li.header__nav-li
                             a.header__nav-link(href="#" target="_blank")!=item
-            .header__catalog
-                a.download-catalog(href="")
-                    span Каталог PDF 
-                    img(src="img/pdf.png", alt="PDF")
+            //- .header__catalog
+            //-     a.download-catalog(href="")
+            //-         span Каталог PDF 
+            //-         img(src="img/pdf.png", alt="PDF")
             
             .header__contacts
                 .contacts-text
                     a.phone(href="tel:74952233554") +7 495 22-33-55-4
                     p.time Пн-Пт с 08-00 до 17-00
                 .contacts-img
-                    img(src="img/header-call.png", alt="Header call")
+                    a(href="tel:74952233554")
+                        img(src="img/header-call.png", alt="Header call")

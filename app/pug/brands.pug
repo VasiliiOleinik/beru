@@ -1,166 +1,192 @@
 extends blocks/_layout
 append content
-    -
-        var catalog = [
-            'Автосвет',
-            'Светодиодные лампы',
-            'Автотовары YASHA',
-            'Ароматизаторы',
-            'АвтоЭлектроника',
-            'Уход за автомобилем',
-            'Интструмент',
-            'Щетки стеклоочистителя',
-            'Автохимия',
-            'Ксенон',
-            'Свет автомобильный',
-            'АвтоАксессуары',
-            'Световое оборудование',
-            'Хомуты, изолента, скотч',
-            'Принадлежности для шиномонтажа',
-        ];
+	-
+		var catalog = [
+			'Автосвет',
+			'Светодиодные лампы',
+			'Автотовары YASHA',
+			'Ароматизаторы',
+			'АвтоЭлектроника',
+			'Уход за автомобилем',
+			'Интструмент',
+			'Щетки стеклоочистителя',
+			'Автохимия',
+			'Ксенон',
+			'Свет автомобильный',
+			'АвтоАксессуары',
+			'Световое оборудование',
+			'Хомуты, изолента, скотч',
+			'Принадлежности для шиномонтажа',
+		];
 
-        var news = [
-            {
-                img: 'img/news.jpg',
-                name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
-                date: '19.09.2019',
-            },
-            {
-                img: 'img/news.jpg',
-                name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
-                date: '19.09.2019',
-            },
-            {
-                img: 'img/news.jpg',
-                name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
-                date: '19.09.2019',
-            }
-        ];
+		var subCatalog = [
+			'Аксессуары автомобильные',
+			'Оплетки рулевого колеса',
+			'Чехлы и накидки на сидения, поддержка поясничная',
+			'Ю.Корея АUTOBAN Аксессуары',
+		]
 
-        var nav = [
-            'Главная',
-            'О компании',
-            'Бренды',
-            'Клиентам',
-            'Акции',
-            'Контакты',
-            'Новости'
-        ];
-    main.main
-        .main__content
-            .main__left-content
-                .left-content-container
-                    .left-containe-logo
-                        a(href="")
-                            img.logo-img(src="img/logo.png", alt="Logo")
-                            span.logo-text Торговый дом «Беру»
-                    .left-container-catalog
-                        h3.title Каталог
-                        ul.catalog-list
-                            each item in catalog
-                                li.catalog-list-item
-                                    a.catalog-item-link(href="")
-                                        span=item
-                                        img(src="img/catalog-item-arr.png", alt="")
-                    .left-container-news
-                        h3.title Новости
-                        .news-list
-                            each item in news
-                                .news-item
-                                    a.news-item__img(href="")
-                                        img(src=item.img, alt=item.name)
-                                    a.news-item__name(href="")=item.name
-                                    a.news-item__date(href="")=item.date
-                            a.show-all-news-btn(href="") Все новости
-            .main__right-content
-                .right-content__header.right-container
-                    .content-header-search.big-search
-                        form(action="")
-                            input.seach-input(type="text" placeholder="Поиск по сайту")
-                            button.search-btn
-                                img(src="img/search-ico.png", alt="Search ico")
-                .right-content__breadcrumbs
-                    ul(class="breadcrumb-list")
-                        li(class="breadcrumb-item")
-                            a(class="breadcrumb-link" href="") Главная /
-                        li(class="breadcrumb-item current")
-                            a(class="breadcrumb-link" href="") Бренды
-                .change-background
-                    .right-content__main-content.right-container
-                        h1(class="pages-title") Бренды
-                        .brand-content
-                            .brand-content__description
-                                p(class="brand-content__description-text") Торговый Дом «БЕРУ» является эксклюзивным представителем торговой марки «Nova Bright» в России и странах СНГ.
-                                    | В США бренд «Nova Bright» известная и уважаемая торговая марка. Те, кто выбрал «Nova Bright» уверены, что автомобиль это отражение внутреннего мира,
-                                    | привычек и индивидуальности владельца. И они не ошибаются. 
-                                p(class="brand-content__description-text") В 2002 г. бренд «Nova Bright» вышел на Российский рынок. В нашей стране, так не похожей на другие, с такими яркими
-                                    | и интересными людьми, характерами и судьбами бренд «Nova Bright» сразу же стал одним из ведущих и известнейших. Кто, как не россияне, могут оценить
-                                    | неповторимую индивидуальность? Кто как не мы готовы быть яркими и оригинальными? И по этому «Nova Bright» это то, что помогает нам проявлять себя.
-                                    | «Nova Bright» - это ваше отражение в автомобиле. 
-                                p(class="brand-content__description-text") Торговый Дом «Беру» предлагает вам полный ассортимент продукции «Nova Bright», а так же  всегда в наличии самый
-                                    | широкий спектр аксессуаров и сопутствующих товаров "Li-Sa", "IROKA", автомобильный инструмент "KingRoy". 
-                            .brand-content__list-container
-                                .brand-item
-                                    a(class="brand-link" href="") 
-                                        img(src="img/brand1.png", alt="")
-                                .brand-item
-                                    a(class="brand-link" href="") 
-                                        img(src="img/brand2.png", alt="")
-                                .brand-item
-                                    a(class="brand-link" href="") 
-                                        img(src="img/brand3.png", alt="")
-                                .brand-item
-                                    a(class="brand-link" href="") 
-                                        img(src="img/no-logo.png", alt="")
-                                .brand-item
-                                    a(class="brand-link" href="") 
-                                        img(src="img/brand1.png", alt="")
-                                .brand-item
-                                    a(class="brand-link" href="") 
-                                        img(src="img/brand2.png", alt="")
-                                .brand-item
-                                    a(class="brand-link" href="") 
-                                        img(src="img/brand3.png", alt="")
-                                .brand-item
-                                    a(class="brand-link" href="") 
-                                        img(src="img/no-logo.png", alt="")
-                            a(class="come-back-btn" href="")
-                                img(src="img/arrow-left.png", alt="")
-                                span Вернуться назад
-                .right-content-subscription
-                    .content-subscription.right-container
-                        span.right-content-subscription-text Подписаться на новостную рассылку
-                        form.right-content-subscription-form(action="")
-                            input.subscription-input(type="text" placeholder="Введите свою электроную почту")
-                            button.subscription-btn 
-                                img(src="img/red-right-arr.png", alt="Subscription btn")
-                .right-content-footer.right-container
-                    .right-content-footer-sitemap
-                        h4.title Карта сайта
-                        .footer-sitemap-block
-                            .footer-sitemap-block-column
-                                ul.sitemap-block-column-list
-                                    li
-                                        a(href="") Главная
-                                    li
-                                        a(href="") О компании
-                                    li
-                                        a(href="") Бренды
-                            .footer-sitemap-block-column
-                                ul.sitemap-block-column-list
-                                    li
-                                        a(href="") Клиентам
-                                    li
-                                        a(href="") Акции
-                                    li
-                                        a(href="") Контакты
-                            .footer-sitemap-block-column
-                                ul.sitemap-block-column-list
-                                    li
-                                        a(href="") Новости
-                    .right-content-footer-contacts
-                        h4.title Наш адрес
-                        p.footer-contacts-text 115088, г. Москва, ул. Южнопортовая, д. 9, стр. 10. Ближайшее метро: «Кожуховская».
-                        p.footer-contacts-text
-                            span +7 495 22-33-55-4
-                            span Пн-Пт с 08-00 до 17-00
+		var news = [
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			}
+		];
+
+		var nav = [
+			'Главная',
+			'О компании',
+			'Бренды',
+			'Клиентам',
+			'Акции',
+			'Контакты',
+			'Новости'
+		];
+	main.main
+		.main__content
+			.main__left-content
+				.left-content-container
+					.left-containe-logo
+						a(href="")
+							img.logo-img(src="img/logo.png", alt="Logo")
+							span.logo-text Торговый дом «Беру»
+					.left-container-catalog
+						h3.title Каталог
+						ul.catalog-list
+							each item in catalog
+								li.catalog-list-item
+									a.catalog-item-link(href="")
+										span=item
+										img(src="img/catalog-item-arr.png", alt="")
+					.left-container-news
+						h3.title Новости
+						.news-list
+							each item in news
+								.news-item
+									a.news-item__img(href="")
+										img(src=item.img, alt=item.name)
+									a.news-item__name(href="")=item.name
+									a.news-item__date(href="")=item.date
+							a.show-all-news-btn(href="") Все новости
+			.main__right-content
+				.right-content__header.right-container
+					.mobile-menu
+						button.hamburger.hamburger--slider(type="button")
+							span.hamburger-box
+								span.hamburger-inner
+								span Меню
+					.content-header-search.big-search
+						form(action="")
+							input.seach-input(type="text" placeholder="Поиск по сайту")
+							button.search-btn
+								img(src="img/search-ico.png", alt="Search ico")
+				.mobile-catalog-section.right-container
+					.mobile-catalog
+						h3.title Каталог
+						ul.mobile-catalog-list
+							each item in catalog
+								li.mobile-catalog-list-item
+									.mobile-catalog-item-block
+										a.mobile-catalog-item-link(href="")=item
+										.mobile-catalog-item-img
+											img(src="img/catalog-item-arr.png", alt="")
+									ul.mobile-catalog-sub-list
+										each item in subCatalog
+											li.mobile-catalog-sub-list-item
+												a(href="")=item
+				.right-content__breadcrumbs
+					ul(class="breadcrumb-list")
+						li(class="breadcrumb-item")
+							a(class="breadcrumb-link" href="") Главная /
+						li(class="breadcrumb-item current")
+							a(class="breadcrumb-link" href="") Бренды
+				.change-background
+					.right-content__main-content.right-container
+						h1(class="pages-title") Бренды
+						.brand-content
+							.brand-content__description
+								p(class="brand-content__description-text") Торговый Дом «БЕРУ» является эксклюзивным представителем торговой марки «Nova Bright» в России и странах СНГ.
+									| В США бренд «Nova Bright» известная и уважаемая торговая марка. Те, кто выбрал «Nova Bright» уверены, что автомобиль это отражение внутреннего мира,
+									| привычек и индивидуальности владельца. И они не ошибаются. 
+								p(class="brand-content__description-text") В 2002 г. бренд «Nova Bright» вышел на Российский рынок. В нашей стране, так не похожей на другие, с такими яркими
+									| и интересными людьми, характерами и судьбами бренд «Nova Bright» сразу же стал одним из ведущих и известнейших. Кто, как не россияне, могут оценить
+									| неповторимую индивидуальность? Кто как не мы готовы быть яркими и оригинальными? И по этому «Nova Bright» это то, что помогает нам проявлять себя.
+									| «Nova Bright» - это ваше отражение в автомобиле. 
+								p(class="brand-content__description-text") Торговый Дом «Беру» предлагает вам полный ассортимент продукции «Nova Bright», а так же  всегда в наличии самый
+									| широкий спектр аксессуаров и сопутствующих товаров "Li-Sa", "IROKA", автомобильный инструмент "KingRoy". 
+							.brand-content__list-container
+								.brand-item
+									a(class="brand-link" href="") 
+										img(src="img/brand1.png", alt="")
+								.brand-item
+									a(class="brand-link" href="") 
+										img(src="img/brand2.png", alt="")
+								.brand-item
+									a(class="brand-link" href="") 
+										img(src="img/brand3.png", alt="")
+								.brand-item
+									a(class="brand-link" href="") 
+										img(src="img/no-logo.png", alt="")
+								.brand-item
+									a(class="brand-link" href="") 
+										img(src="img/brand1.png", alt="")
+								.brand-item
+									a(class="brand-link" href="") 
+										img(src="img/brand2.png", alt="")
+								.brand-item
+									a(class="brand-link" href="") 
+										img(src="img/brand3.png", alt="")
+								.brand-item
+									a(class="brand-link" href="") 
+										img(src="img/no-logo.png", alt="")
+							a(class="come-back-btn" href="")
+								img(src="img/arrow-left.png", alt="")
+								span Вернуться назад
+				.right-content-subscription
+					.content-subscription.right-container
+						span.right-content-subscription-text Подписаться на новостную рассылку
+						form.right-content-subscription-form(action="")
+							input.subscription-input(type="text" placeholder="Введите свою электроную почту")
+							button.subscription-btn 
+								img(src="img/red-right-arr.png", alt="Subscription btn")
+				.right-content-footer.right-container
+					.right-content-footer-sitemap
+						h4.title Карта сайта
+						.footer-sitemap-block
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Главная
+									li
+										a(href="") О компании
+									li
+										a(href="") Бренды
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Клиентам
+									li
+										a(href="") Акции
+									li
+										a(href="") Контакты
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Новости
+					.right-content-footer-contacts
+						h4.title Наш адрес
+						p.footer-contacts-text 115088, г. Москва, ул. Южнопортовая, д. 9, стр. 10. Ближайшее метро: «Кожуховская».
+						p.footer-contacts-text
+							span +7 495 22-33-55-4
+							span Пн-Пт с 08-00 до 17-00

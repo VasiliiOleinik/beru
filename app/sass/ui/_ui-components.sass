@@ -42,6 +42,9 @@ select, input, textarea
   min-height: 100vh
   display: flex
   flex-direction: column
+  position: relative
+  transition: .3s
+  left: 0
 
 .page-wrapper
   flex: 1 1
@@ -394,10 +397,44 @@ select, input, textarea
           & img
             margin-left: 5px
             transform: rotate(180deg)
-
+.right-content__breadcrumbs .breadcrumb-list
+  width: 100%
 .right-content__breadcrumbs .breadcrumb-list .breadcrumb-item
     display: flex
     align-items: center
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before
+  border-radius: 0px
+
+.hamburger
+  padding: 0
+  margin-right: 10px
+
+.hamburger-box
+  top: 2px
+  width: auto
+  display: flex
+
+.hamburger--slider .hamburger-inner,
+  margin-right: 10px
+  position: relative
+  height: 2px
+  width: 35px
+.hamburger--slider .hamburger-inner::before,
+.hamburger--slider .hamburger-inner::after
+  height: 2px
+  width: 35px
+.main__right-content .right-content__header .content-header-search.big-search form
+  width: 100%
+  justify-content: flex-end
+@include media( 767 )
+  .right-content__breadcrumbs .breadcrumb-list .breadcrumb-item.current
+    display: none
+
+  .right-content__breadcrumbs
+    padding: 0px 20px !important
 
 @include media( 530 )
   .pagination-list .pagination-list-item:nth-of-type(5)
@@ -413,3 +450,7 @@ select, input, textarea
 
 .no-margin-bottom
   margin-bottom: 0px
+
+@include media (350)
+  .right-content__breadcrumbs .breadcrumb-list .breadcrumb-item .breadcrumb-link
+    font-size: 13px !important

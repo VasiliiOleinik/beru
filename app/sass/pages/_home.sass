@@ -46,7 +46,7 @@ h3.title
 				z-index: 3
 				width: 100%
 				max-width: 240px
-				margin-bottom: 165px
+				margin-bottom: 100px
 
 				& .catalog-list
 					padding-right: 20px
@@ -177,7 +177,7 @@ h3.title
 		& .right-container
 			max-width: 870px
 			width: 100%
-			padding-left: 20px
+			padding-left: 15px
 
 		& .right-content__header
 			display: flex
@@ -208,6 +208,17 @@ h3.title
 						width: 50px
 						height: 50px
 						background-color: #1a2533
+						transition: .3s
+
+						& img
+							transition: .3s
+						
+						&:hover
+							transition: .3s
+
+							& img
+								width: 24px
+								transition: .3s
 			
 			& .content-header-cart
 				width: 170px
@@ -477,7 +488,6 @@ h3.title
 									background-position: center center
 									transition: all 0.3s ease 0s
 
-
 			& .right-content-footer-contacts
 				display: flex
 				width: 50%
@@ -536,7 +546,8 @@ h3.title
 .mobile-menu,
 .tab-block-title,
 #menu,
-.menu-overlay
+.menu-overlay,
+.mobile-catalog-section
 	display: none
 @include media( 1600 )
 	.content-wrapper
@@ -617,7 +628,9 @@ h3.title
 		& .header__nav
 			display: none
 		& .mobile-menu
-			display: block
+			display: flex
+			align-items: center
+			margin-right: 20px
 		& .header__body .left-containe-logo
 			display: flex
 			width: auto
@@ -667,9 +680,12 @@ h3.title
 		& .main__right-content .right-content__header .content-header-search form .search-btn
 			width: 30px
 			height: 30px
+			transition: .3s
 
 			& img
 				width: 14px
+				transition: .3s
+
 		& .main__right-content .right-content__header .content-header-search
 			width: auto
 			height: 30px
@@ -717,6 +733,98 @@ h3.title
 						text-decoration: none
 						transition: .3s
 						color: #ff0000
+
+	& .mobile-catalog-section
+		display: block
+		& .mobile-catalog
+			display: flex
+			width: 100%
+			height: auto
+			margin: 20px 0px
+			align-items: center
+			flex-direction: column
+			justify-content: flex-start
+			position: relative
+
+			& .title
+				margin: 0px
+				width: 100%
+				height: 100%
+				display: flex
+				align-items: center
+				background-color: #1a2533
+				height: 40px
+				padding: 0px 20px
+				font-size: 18px
+				padding: 0px 20px
+
+			& .mobile-catalog-list
+				width: 100%
+				background-color: #1a2533
+				display: none
+				flex-direction: column
+				padding: 20px
+				padding-right: 0px
+
+				& .mobile-catalog-list-item
+					display: flex
+					align-items: center
+					width: 100%
+					flex-direction: column
+					border-bottom: 1px solid transparent
+					transition: .3s
+
+					&.active
+						border-bottom: 1px solid #fff
+						transition: .3s
+
+					& .mobile-catalog-item-block
+						display: flex
+						align-items: center
+						width: 100%
+						height: 40px
+						justify-content: space-between
+
+						& .mobile-catalog-item-link
+							width: 50%
+							justify-content: space-between
+							display: flex
+							align-items: center
+							color: #ffffff
+
+						& .mobile-catalog-item-img
+							width: 50%
+							display: flex
+							align-items: center
+							justify-content: flex-end
+							height: 100%
+							padding-right: 20px
+
+							& img
+								transition: .3s
+								transform: rotate(0deg)
+
+							&.rotate img
+								transition: .3s
+								transform: rotate(90deg)
+
+
+					& .mobile-catalog-sub-list
+						display: none
+						width: 100%
+						flex-direction: column
+						padding: 10px 20px
+
+						& .mobile-catalog-sub-list-item
+							height: 40px
+							width: 100%
+							display: flex
+							align-items: center
+
+							& a
+								color: #ffffff
+
+
 @include media( 767 )
 	.content-wrapper
 		& .main__right-content .right-content__header .content-header-search form .seach-input
