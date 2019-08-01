@@ -56,7 +56,7 @@
 	&__list-container
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-between
+		justify-content: flex-start
 		margin-bottom: 100px
 
 		& .brand-item
@@ -68,7 +68,56 @@
 			margin-bottom: 15px
 			justify-content: center
 			align-items: center
+			margin-right: 19px
+
+			&:nth-of-type(4n)
+				margin-right: 0px
+
+@include media( 1600 )
+	.brand-content__list-container .brand-item:nth-of-type(3n)
+		margin-right: 0px
+
+	.brand-content__list-container .brand-item,
+	.brand-content__list-container .brand-item:nth-of-type(4n)
+		margin-right: 63px
+
+@include media( 1070 )
+	.brand-content__list-container .brand-item, .brand-content__list-container .brand-item:nth-of-type(4n)
+		margin-right: 50px
+	.brand-content__list-container .brand-item:nth-of-type(3n)
+		margin-right: 0px
+
+@include media (1024 )
+	.brand-content__list-container .brand-item, .brand-content__list-container .brand-item:nth-of-type(3n)
+		margin-right: 20px
+	.brand-content__list-container .brand-item:nth-of-type(4n)
+		margin-right: 0px
+
+@include media (885 )
+	.brand-content__list-container .brand-item, .brand-content__list-container .brand-item:nth-of-type(4n)
+		margin-right: 20px
+	.brand-content__list-container .brand-item:nth-of-type(3n)
+		margin-right: 0px
 
 @include media( 767 )
 	.content-wrapper .main__right-content .right-content__header .content-header-search.big-search form .seach-input
 		display: initial
+	
+@include media( 726 )
+	.brand-content__list-container .brand-item:nth-of-type(even),
+		margin-right: 0px
+	.brand-content__list-container .brand-item:nth-of-type(odd),
+	.brand-content__list-container .brand-item
+		margin-right: 50px
+	.brand-content__list-container
+		justify-content: center
+
+@include media( 477 )
+	.brand-content__list-container .brand-item:nth-of-type(odd),
+	.brand-content__list-container .brand-item:nth-of-type(even),
+	.brand-content__list-container .brand-item
+		margin: 0 auto
+		margin-bottom: 10px
+	.brand-content__list-container
+		justify-content: center
+		flex-direction: column

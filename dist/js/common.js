@@ -86,24 +86,25 @@ $(document).ready(function() {
     });
 
     // Карусель на главной с категориями
-    $(".catalog-slider.owl-carousel").owlCarousel({
+    $(".main-catalog-item-img.owl-carousel").owlCarousel({
       loop: true,
       nav: false,
       dots: false,
-      autoplay: false,
+      autoplay: true,
+      autoplayTimeout: 4000,
       margin: 15,
       responsive: {
         0: {
           items: 1
         },
         450: {
-          items: 2
+          items: 1
         },
         768: {
-          items: 3
+          items: 1
         },
         1000: {
-          items: 3
+          items: 1
         }
       }
     });

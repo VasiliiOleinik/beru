@@ -417,6 +417,10 @@ h3.title
 						background-color: #e6e6e6
 						align-items: center
 						padding: 0px 10px
+						color: #3a4e5f
+						font-family: "Open Sans"
+						font-size: 14px
+						font-weight: 600
 
 					& .subscription-btn 
 						width: 50px
@@ -507,10 +511,10 @@ h3.title
 .right-content__tabs.slider
 	& .catalog-slider
 		padding: 0px 5px
-		& .owl-item
-			height: 315px
-			padding-top: 5px
+		display: flex
+		justify-content: space-between
 		& .main-catalog-item
+			width: 270px
 			height: 300px
 			box-shadow: 0 2px 10px rgba(183, 183, 183, 0.5)
 			background-color: #ffffff
@@ -528,6 +532,9 @@ h3.title
 
 				& img
 					max-width: 100%
+					width: 150px
+					margin: 0 auto
+					text-align: center
 				
 			& .main-catalog-item-name
 				width: 100%
@@ -557,7 +564,6 @@ h3.title
 			margin-right: 58px
 		& .main__right-content .right-container
 			width: 100%
-			padding-right: 15px
 			max-width: 753px
 		& .main__right-content .right-content__header .content-header-search
 			margin-right: 50px
@@ -572,7 +578,7 @@ h3.title
 		& .main__left-content .left-content-container .left-container-catalog
 			margin-bottom: 70px
 		& .main__right-content .right-content-footer .right-content-footer-sitemap
-			display: none
+			margin-right: 20px
 		& .main__right-content .right-content-footer .right-content-footer-contacts
 			width: 100%
 		& .main__right-content .right-content-subscription .content-subscription .right-content-subscription-text
@@ -588,7 +594,22 @@ h3.title
 		& .main__right-content .right-content__tabs .right-tabs-block__content .tabs-content-item .product-image
 			max-width: initial
 			width: 100%
-
+	.right-content__tabs.slider .catalog-slider .main-catalog-item
+		width: 200px
+		height: 250px
+	.right-content__tabs.slider .catalog-slider .main-catalog-item .main-catalog-item-img img
+		width: 100px
+@include media ( 1440 )
+	.content-wrapper .main__right-content .right-content__header
+		max-width: 697px
+	.header__contacts .contacts-text .phone,
+	.header__nav-link
+		font-size: 15px !important
+	.main__right-content .right-content-footer .right-content-footer-sitemap
+		width: 100%
+		margin-bottom: 20px
+	.content-wrapper .main__right-content .right-container
+		flex-direction: column
 @include media( 1200 )
 	.content-wrapper
 		& .main__right-content
@@ -598,12 +619,15 @@ h3.title
 
 @include media( 1024 )
 	.content-wrapper
+		& .main__right-content .right-content-footer .right-content-footer-sitemap
+			display: none
 		& .main__left-content
 			display: none
 		& .main__right-content
 			width: 100%
 		& .main__right-content .right-container
 			max-width: initial
+			padding-right: 15px
 		& .main__right-content .right-content__slider .owl-dots
 			right: 75px
 		& .main__right-content .right-content__slider .main-carousel .slide-info-block
@@ -902,9 +926,21 @@ h3.title
 			padding: 0px
 		& .main__right-content .right-content__tabs .right-tabs-block__content .tabs-content-item
 			margin: 0px
-		& .main__right-content .right-content__tabs
-			padding-top: 0px
 		& .main__right-content .right-content__header .content-header-cart
 			margin-right: 0px
 		& .main__right-content .right-content__header .content-header-search
 			margin-right: 0px
+
+@include media(680)
+	.right-content__tabs.slider .catalog-slider
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+	.right-content__tabs.slider .catalog-slider .main-catalog-item 
+		width: 270px
+		height: 300px
+		margin-bottom: 20px
+	
+	.right-content__tabs.slider .catalog-slider .main-catalog-item .main-catalog-item-img img
+		width: 150px

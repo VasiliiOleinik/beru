@@ -1,348 +1,372 @@
 extends blocks/_layout
 append content
-    -
-        var catalog = [
-            'Автосвет',
-            'Светодиодные лампы',
-            'Автотовары YASHA',
-            'Ароматизаторы',
-            'АвтоЭлектроника',
-            'Уход за автомобилем',
-            'Интструмент',
-            'Щетки стеклоочистителя',
-            'Автохимия',
-            'Ксенон',
-            'Свет автомобильный',
-            'АвтоАксессуары',
-            'Световое оборудование',
-            'Хомуты, изолента, скотч',
-            'Принадлежности для шиномонтажа',
-        ];
+	-
+		var catalog = [
+			'Автосвет',
+			'Светодиодные лампы',
+			'Автотовары YASHA',
+			'Ароматизаторы',
+			'АвтоЭлектроника',
+			'Уход за автомобилем',
+			'Интструмент',
+			'Щетки стеклоочистителя',
+			'Автохимия',
+			'Ксенон',
+			'Свет автомобильный',
+			'АвтоАксессуары',
+			'Световое оборудование',
+			'Хомуты, изолента, скотч',
+			'Принадлежности для шиномонтажа',
+		];
 
-        var subCatalog = [
-            'Аксессуары автомобильные',
-            'Оплетки рулевого колеса',
-            'Чехлы и накидки на сидения, поддержка поясничная',
-            'Ю.Корея АUTOBAN Аксессуары',
-        ]
+		var subCatalog = [
+			'Аксессуары автомобильные',
+			'Оплетки рулевого колеса',
+			'Чехлы и накидки на сидения, поддержка поясничная',
+			'Ю.Корея АUTOBAN Аксессуары',
+		]
 
-        var news = [
-            {
-                img: 'img/news.jpg',
-                name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
-                date: '19.09.2019',
-            },
-            {
-                img: 'img/news.jpg',
-                name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
-                date: '19.09.2019',
-            },
-        ];
+		var news = [
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+			{
+				img: 'img/news.jpg',
+				name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+				date: '19.09.2019',
+			},
+		];
 
-        var slider = [
-            'img/slide-img2.jpg',
-            'img/slide-img3.jpg',
-        ];
+		var slider = [
+			'img/slide-img2.jpg',
+			'img/slide-img3.jpg',
+		];
 
-        var tabProdFirst = [
-            {
-                img: "img/tab-prod.jpg",
-                art: '39907',
-                code: '00000006721',
-                description: 'Щетка для снега cо скребком "black&blue" поролоновая ручка',
-                count: '1 комплект',
-                price: '405',
-                currency: '₽',
-            },
-            {
-                img: "img/tab-prod.jpg",
-                art: '39907',
-                code: '00000006721',
-                description: 'Щетка для снега cо скребком "black&blue" поролоновая ручка',
-                price: '405',
-                currency: '₽',
-            },
-        ];
+		var tabProdFirst = [
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '00000006721',
+				description: 'Щетка для снега cо скребком "black&blue" поролоновая ручка',
+				count: '1 комплект',
+				price: '405',
+				currency: '₽',
+			},
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '00000006721',
+				description: 'Щетка для снега cо скребком "black&blue" поролоновая ручка',
+				price: '405',
+				currency: '₽',
+			},
+		];
 
-        var tabProdSecond = [
-            {
-                img: "img/tab-prod.jpg",
-                art: '39907',
-                code: '00000006721',
-                description: 'Автосвет',
-                count: '1 комплект',
-                price: '405',
-                currency: '₽',
-            },
-            {
-                img: "img/tab-prod.jpg",
-                art: '39907',
-                code: '2222222222222',
-                description: 'Автосвет',
-                price: '405',
-                currency: '€',
-            },
-        ];
+		var tabProdSecond = [
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '00000006721',
+				description: 'Автосвет',
+				count: '1 комплект',
+				price: '405',
+				currency: '₽',
+			},
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '2222222222222',
+				description: 'Автосвет',
+				price: '405',
+				currency: '€',
+			},
+		];
 
-        var tabProdThird = [
-            {
-                img: "img/tab-prod.jpg",
-                art: '39907',
-                code: '333333333333',
-                description: 'Принадлежности для шиномонтажа',
-                count: '1 комплект',
-                price: '405',
-                currency: '₴',
-            },
-            {
-                img: "img/tab-prod.jpg",
-                art: '39907',
-                code: '33333333',
-                description: 'Принадлежности для шиномонтажа',
-                price: '405',
-                currency: '₴',
-            },
-        ];
+		var tabProdThird = [
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '333333333333',
+				description: 'Принадлежности для шиномонтажа',
+				count: '1 комплект',
+				price: '405',
+				currency: '₴',
+			},
+			{
+				img: "img/tab-prod.jpg",
+				art: '39907',
+				code: '33333333',
+				description: 'Принадлежности для шиномонтажа',
+				price: '405',
+				currency: '₴',
+			},
+		];
 
-        var prodCout = [
-            '1 комплект',
-            '2 комплект',
-            '3 комплект',
-            '4 комплект',
-            '5 комплект',
-        ];
+		var prodCout = [
+			'1 комплект',
+			'2 комплект',
+			'3 комплект',
+			'4 комплект',
+			'5 комплект',
+		];
 
 
-        var elements = [
-            {
-                img: 'img/img-cat1.png',
-                name: 'Новинки',
-            },
-            {
-                img: 'img/img-cat2.png',
-                name: 'Хиты',
-            },
-            {
-                img: 'img/img-cat3.png',
-                name: 'Сезонные предложения',
-            },
-        ];
+		var elements = [
+			{
+				img: 'img/img-cat1.png',
+				name: 'Новинки',
+			},
+			{
+				img: 'img/img-cat2.png',
+				name: 'Хиты продаж',
+			},
+			{
+				img: 'img/img-cat3.png',
+				name: 'Сезонные предложения',
+			},
+		];
 
-        var nav = [
-            'Главная',
-            'О компании',
-            'Бренды',
-            'Клиентам',
-            'Акции',
-            'Контакты',
-            'Новости'
-        ];
+		var nav = [
+			'Главная',
+			'О компании',
+			'Бренды',
+			'Клиентам',
+			'Акции',
+			'Контакты',
+			'Новости'
+		];
 
-        
-    main.main
-        .main__content
-            .main__left-content
-                .left-content-container
-                    .left-containe-logo
-                        a(href="")
-                            img.logo-img(src="img/logo.png", alt="Logo")
-                            span.logo-text Торговый дом «Беру»
-                    .left-container-catalog
-                        h3.title Каталог
-                        ul.catalog-list
-                            each item in catalog
-                                li.catalog-list-item
-                                    a.catalog-item-link(href="")
-                                        span=item
-                                        img(src="img/catalog-item-arr.png", alt="")
-                                    ul.catalog-sub-list
-                                        each item in subCatalog
-                                            li.catalog-sub-list-item
-                                                a(href="")=item
-                    .left-container-news
-                        h3.title Новости
-                        .news-list
-                            each item in news
-                                .news-item
-                                    a.news-item__img(href="")
-                                        img(src=item.img, alt=item.name)
-                                    a.news-item__name(href="")=item.name
-                                    a.news-item__date(href="")=item.date
-                            a.show-all-news-btn(href="") Все новости
-            .main__right-content
-                .right-content__header.right-container
-                    .mobile-menu
-                        button.hamburger.hamburger--slider(type="button")
-                            span.hamburger-box
-                                span.hamburger-inner
-                                span Меню
-                    .content-header-search.big-search
-                        form(action="")
-                            input.seach-input(type="text" placeholder="Поиск по сайту")
-                            button.search-btn
-                                img(src="img/search-ico.png", alt="Search ico")
-                    //- .content-header-cart
-                    //-     a.main-cart-btn(href="")
-                    //-         img(src="img/cart-ico.png", alt="Cart ico")
-                    //-         p 220
-                    //-             span товаров
-                    //- .content-header-user
-                    //-     a.main-user-btn(href="")
-                    //-         span.user-name Роман Васерман
-                    //-         p.user-img
-                    //-             img(src="img/user-ico.png", alt="")
-                .mobile-catalog-section.right-container
-                    .mobile-catalog
-                        h3.title Каталог
-                        ul.mobile-catalog-list
-                            each item in catalog
-                                li.mobile-catalog-list-item
-                                    .mobile-catalog-item-block
-                                        a.mobile-catalog-item-link(href="")=item
-                                        .mobile-catalog-item-img
-                                            img(src="img/catalog-item-arr.png", alt="")
-                                    ul.mobile-catalog-sub-list
-                                        each item in subCatalog
-                                            li.mobile-catalog-sub-list-item
-                                                a(href="")=item
-                .right-content__slider
-                    .owl-carousel.main-carousel
-                        each item in slider
-                            .item
-                                img(src=item, alt="")
-                                .slide-info-block
-                                    span.slide-info-block-text Щетки -пыльники «LiSa»
-                                    img.slide-info-block-image(src="img/lisa-logo.png", alt="")
-                .right-content__tabs.right-container.slider
-                    .catalog-slider.owl-carousel
-                        each item in elements
-                            .main-catalog-item
-                                .main-catalog-item-img
-                                    a(href="")
-                                        img(src=item.img, alt="")
-                                .main-catalog-item-name
-                                    a(href="")=item.name
+		
+	main.main
+		.main__content
+			.main__left-content
+				.left-content-container
+					.left-containe-logo
+						a(href="")
+							img.logo-img(src="img/logo.png", alt="Logo")
+							span.logo-text Торговый дом «Беру»
+					.left-container-catalog
+						h3.title Каталог
+						ul.catalog-list
+							each item in catalog
+								li.catalog-list-item
+									a.catalog-item-link(href="")
+										span=item
+										img(src="img/catalog-item-arr.png", alt="")
+									ul.catalog-sub-list
+										each item in subCatalog
+											li.catalog-sub-list-item
+												a(href="")=item
+					.left-container-news
+						h3.title Новости
+						.news-list
+							each item in news
+								.news-item
+									a.news-item__img(href="")
+										img(src=item.img, alt=item.name)
+									a.news-item__name(href="")=item.name
+									a.news-item__date(href="")=item.date
+							a.show-all-news-btn(href="") Все новости
+			.main__right-content
+				.right-content__header.right-container
+					.mobile-menu
+						button.hamburger.hamburger--slider(type="button")
+							span.hamburger-box
+								span.hamburger-inner
+								span Меню
+					.content-header-search.big-search
+						form(action="")
+							input.seach-input(type="text" placeholder="Поиск по сайту")
+							button.search-btn
+								img(src="img/search-ico.png", alt="Search ico")
+					//- .content-header-cart
+					//-     a.main-cart-btn(href="")
+					//-         img(src="img/cart-ico.png", alt="Cart ico")
+					//-         p 220
+					//-             span товаров
+					//- .content-header-user
+					//-     a.main-user-btn(href="")
+					//-         span.user-name Роман Васерман
+					//-         p.user-img
+					//-             img(src="img/user-ico.png", alt="")
+				.mobile-catalog-section.right-container
+					.mobile-catalog
+						h3.title Каталог
+						ul.mobile-catalog-list
+							each item in catalog
+								li.mobile-catalog-list-item
+									.mobile-catalog-item-block
+										a.mobile-catalog-item-link(href="")=item
+										.mobile-catalog-item-img
+											img(src="img/catalog-item-arr.png", alt="")
+									ul.mobile-catalog-sub-list
+										each item in subCatalog
+											li.mobile-catalog-sub-list-item
+												a(href="")=item
+				.right-content__slider
+					.owl-carousel.main-carousel
+						each item in slider
+							.item
+								img(src=item, alt="")
+								.slide-info-block
+									span.slide-info-block-text Щетки -пыльники «LiSa»
+									img.slide-info-block-image(src="img/lisa-logo.png", alt="")
+				.right-content__tabs.right-container.slider
+					.catalog-slider
+						//- each item in elements
+						.main-catalog-item
+							.main-catalog-item-img.owl-carousel
+								a(href="")
+									img(src="../img/new1.jpeg", alt="")
+								a(href="")
+									img(src="../img/new2.jpeg", alt="")
+								a(href="")
+									img(src="../img/new3.jpeg", alt="")
+							.main-catalog-item-name
+								a(href="") Новинки
+						.main-catalog-item
+							.main-catalog-item-img.owl-carousel
+								a(href="")
+									img(src="../img/hit1.jpeg", alt="")
+								a(href="")
+									img(src="../img/hit2.jpeg", alt="")
+								a(href="")
+									img(src="../img/hit3.jpeg", alt="")
+							.main-catalog-item-name
+								a(href="") Хиты
+						.main-catalog-item
+							.main-catalog-item-img.owl-carousel
+								a(href="")
+									img(src="../img/prop1.jpeg", alt="")
+								a(href="")
+									img(src="../img/prop2.jpeg", alt="")
+								a(href="")
+									img(src="../img/prop3.jpeg", alt="")
+							.main-catalog-item-name
+								a(href="") Сезоныне предложения
 
-                    //- .right-tabs-block#tabs
-                    //-     ul.right-tabs-block__menu
-                    //-         li.tab.active
-                    //-             a(href="#tab1") Новинки
-                    //-         li.tab
-                    //-             a(href="#tab2") Сезонные предложения
-                    //-         li.tab
-                    //-             a(href="#tab3") Хиты
-                    //-     h4.tab-block-title Новинки       
-                    //-     .right-tabs-block__content#tab1(class="owl-carousel")
-                    //-         each item in tabProdFirst
-                    //-              .product
-                    //-                 img.product-image(src=item.img, alt=item.name)
-                    //-                 p.product-label Артикул:
-                    //-                     span=item.art
-                    //-                 p.product-label Код товара:
-                    //-                     span=item.code
-                    //-                 p.product-text=item.description
-                    //-                 .product-count
-                    //-                     p.product-label.bold Количество:
-                    //-                     .product-choose-count
-                    //-                         span.product-choose-count-choosen
-                    //-                         ul.product-choose-count-list
-                    //-                             each item in prodCout
-                    //-                                 li.product-list-item=item
-                    //-                 .product-footer
-                    //-                     .product-footer-left
-                    //-                         p.product-label.bold Цена:
-                    //-                             span.price=item.price
-                    //-                             span.currency=item.currency
-                    //-                     .product-footer-right
-                    //-                         button.item-to-cart
-                    //-                             img(src="img/white-cart-ico.png", alt="White cart")
-                    //-                             | В корзину
-                    //-     h4.tab-block-title Сезонные предложения                       
-                    //-     .right-tabs-block__content#tab2(class="owl-carousel")
-                    //-         each item in tabProdSecond
-                    //-             .product
-                    //-                 img.product-image(src=item.img, alt=item.name)
-                    //-                 p.product-label Артикул:
-                    //-                     span=item.art
-                    //-                 p.product-label Код товара:
-                    //-                     span=item.code
-                    //-                 p.product-text=item.description
-                    //-                 .product-count
-                    //-                     p.product-label.bold Количество:
-                    //-                     .product-choose-count
-                    //-                         span.product-choose-count-choosen
-                    //-                         ul.product-choose-count-list
-                    //-                             each item in prodCout
-                    //-                                 li.product-list-item=item
-                    //-                 .product-footer
-                    //-                     .product-footer-left
-                    //-                         p.product-label.bold Цена:
-                    //-                             span.price=item.price
-                    //-                             span.currency=item.currency
-                    //-                     .product-footer-right
-                    //-                         button.item-to-cart
-                    //-                             img(src="img/white-cart-ico.png", alt="White cart")
-                    //-                             | В корзину
-                    //-     h4.tab-block-title Хиты
-                    //-     .right-tabs-block__content#tab3(class="owl-carousel")
-                    //-         each item in tabProdThird
-                    //-             .product
-                    //-                 img.product-image(src=item.img, alt=item.name)
-                    //-                 p.product-label Артикул:
-                    //-                     span=item.art
-                    //-                 p.product-label Код товара:
-                    //-                     span=item.code
-                    //-                 p.product-text=item.description
-                    //-                 .product-count
-                    //-                     p.product-label.bold Количество:
-                    //-                     .product-choose-count
-                    //-                         span.product-choose-count-choosen
-                    //-                         ul.product-choose-count-list
-                    //-                             each item in prodCout
-                    //-                                 li.product-list-item=item
-                    //-                 .product-footer
-                    //-                     .product-footer-left
-                    //-                         p.product-label.bold Цена:
-                    //-                             span.price=item.price
-                    //-                             span.currency=item.currency
-                    //-                     .product-footer-right
-                    //-                         button.item-to-cart
-                    //-                             img(src="img/white-cart-ico.png", alt="White cart")
-                    //-                             | В корзину
-                .right-content-subscription
-                    .content-subscription.right-container
-                        span.right-content-subscription-text Подписаться на новостную рассылку
-                        form.right-content-subscription-form(action="")
-                            input.subscription-input(type="text" placeholder="Введите свою электроную почту")
-                            button.subscription-btn 
-                                img(src="img/red-right-arr.png", alt="Subscription btn")
-                .right-content-footer.right-container
-                    .right-content-footer-sitemap
-                        h4.title Карта сайта
-                        .footer-sitemap-block
-                            .footer-sitemap-block-column
-                                ul.sitemap-block-column-list
-                                    li
-                                        a(href="") Главная
-                                    li
-                                        a(href="") О компании
-                                    li
-                                        a(href="") Бренды
-                            .footer-sitemap-block-column
-                                ul.sitemap-block-column-list
-                                    li
-                                        a(href="") Клиентам
-                                    li
-                                        a(href="") Акции
-                                    li
-                                        a(href="") Контакты
-                            .footer-sitemap-block-column
-                                ul.sitemap-block-column-list
-                                    li
-                                        a(href="") Новости
-                    .right-content-footer-contacts
-                        h4.title Наш адрес
-                        p.footer-contacts-text 115088, г. Москва, ул. Южнопортовая, д. 9, стр. 10. Ближайшее метро: «Кожуховская».
-                        p.footer-contacts-text
-                            span +7 495 22-33-55-4
-                            span Пн-Пт с 08-00 до 17-00
+					//- .right-tabs-block#tabs
+					//-     ul.right-tabs-block__menu
+					//-         li.tab.active
+					//-             a(href="#tab1") Новинки
+					//-         li.tab
+					//-             a(href="#tab2") Сезонные предложения
+					//-         li.tab
+					//-             a(href="#tab3") Хиты
+					//-     h4.tab-block-title Новинки       
+					//-     .right-tabs-block__content#tab1(class="owl-carousel")
+					//-         each item in tabProdFirst
+					//-              .product
+					//-                 img.product-image(src=item.img, alt=item.name)
+					//-                 p.product-label Артикул:
+					//-                     span=item.art
+					//-                 p.product-label Код товара:
+					//-                     span=item.code
+					//-                 p.product-text=item.description
+					//-                 .product-count
+					//-                     p.product-label.bold Количество:
+					//-                     .product-choose-count
+					//-                         span.product-choose-count-choosen
+					//-                         ul.product-choose-count-list
+					//-                             each item in prodCout
+					//-                                 li.product-list-item=item
+					//-                 .product-footer
+					//-                     .product-footer-left
+					//-                         p.product-label.bold Цена:
+					//-                             span.price=item.price
+					//-                             span.currency=item.currency
+					//-                     .product-footer-right
+					//-                         button.item-to-cart
+					//-                             img(src="img/white-cart-ico.png", alt="White cart")
+					//-                             | В корзину
+					//-     h4.tab-block-title Сезонные предложения                       
+					//-     .right-tabs-block__content#tab2(class="owl-carousel")
+					//-         each item in tabProdSecond
+					//-             .product
+					//-                 img.product-image(src=item.img, alt=item.name)
+					//-                 p.product-label Артикул:
+					//-                     span=item.art
+					//-                 p.product-label Код товара:
+					//-                     span=item.code
+					//-                 p.product-text=item.description
+					//-                 .product-count
+					//-                     p.product-label.bold Количество:
+					//-                     .product-choose-count
+					//-                         span.product-choose-count-choosen
+					//-                         ul.product-choose-count-list
+					//-                             each item in prodCout
+					//-                                 li.product-list-item=item
+					//-                 .product-footer
+					//-                     .product-footer-left
+					//-                         p.product-label.bold Цена:
+					//-                             span.price=item.price
+					//-                             span.currency=item.currency
+					//-                     .product-footer-right
+					//-                         button.item-to-cart
+					//-                             img(src="img/white-cart-ico.png", alt="White cart")
+					//-                             | В корзину
+					//-     h4.tab-block-title Хиты
+					//-     .right-tabs-block__content#tab3(class="owl-carousel")
+					//-         each item in tabProdThird
+					//-             .product
+					//-                 img.product-image(src=item.img, alt=item.name)
+					//-                 p.product-label Артикул:
+					//-                     span=item.art
+					//-                 p.product-label Код товара:
+					//-                     span=item.code
+					//-                 p.product-text=item.description
+					//-                 .product-count
+					//-                     p.product-label.bold Количество:
+					//-                     .product-choose-count
+					//-                         span.product-choose-count-choosen
+					//-                         ul.product-choose-count-list
+					//-                             each item in prodCout
+					//-                                 li.product-list-item=item
+					//-                 .product-footer
+					//-                     .product-footer-left
+					//-                         p.product-label.bold Цена:
+					//-                             span.price=item.price
+					//-                             span.currency=item.currency
+					//-                     .product-footer-right
+					//-                         button.item-to-cart
+					//-                             img(src="img/white-cart-ico.png", alt="White cart")
+					//-                             | В корзину
+				.right-content-subscription
+					.content-subscription.right-container
+						span.right-content-subscription-text Подписаться на новостную рассылку
+						form.right-content-subscription-form(action="")
+							input.subscription-input(type="text" placeholder="Введите свою электроную почту")
+							button.subscription-btn 
+								img(src="img/red-right-arr.png", alt="Subscription btn")
+				.right-content-footer.right-container
+					.right-content-footer-sitemap
+						h4.title Карта сайта
+						.footer-sitemap-block
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Главная
+									li
+										a(href="") О компании
+									li
+										a(href="") Бренды
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Клиентам
+									li
+										a(href="") Акции
+									li
+										a(href="") Контакты
+							.footer-sitemap-block-column
+								ul.sitemap-block-column-list
+									li
+										a(href="") Новости
+					.right-content-footer-contacts
+						h4.title Наш адрес
+						p.footer-contacts-text Россия, Москва, Шарикоподшипниковская улица, 38с1м. Дубровка
+						p.footer-contacts-text
+							span +7 (495)223-35-54
+							span Пн-Пт с 08-00 до 17-00

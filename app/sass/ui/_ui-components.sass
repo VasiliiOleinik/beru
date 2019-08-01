@@ -63,6 +63,10 @@ select, input, textarea
   @include media( 1600 )
     max-width: 1024px
     padding: 0px 15px
+  
+  @include media( 1440 )
+    max-width: 991px
+    padding: 0px 15px
 
   &.wrap
     flex-wrap: wrap
@@ -246,11 +250,11 @@ select, input, textarea
     
     & .product-footer-right
       display: flex
-      width: 50%
+      width: 100%
       justify-content: flex-end
 
       & .item-to-cart
-        width: 173px
+        width: 100%
         height: 35px
         background-color: #ff0000
         border: none
@@ -429,12 +433,15 @@ select, input, textarea
 .main__right-content .right-content__header .content-header-search.big-search form
   width: 100%
   justify-content: flex-end
+
 @include media( 767 )
   .right-content__breadcrumbs .breadcrumb-list .breadcrumb-item.current
     display: none
 
   .right-content__breadcrumbs
     padding: 0px 20px !important
+
+    
 
 @include media( 530 )
   .pagination-list .pagination-list-item:nth-of-type(5)

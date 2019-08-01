@@ -199,13 +199,13 @@ append content
 											span=item.country
 										p(class="detail-product-info-text description") Дополнительное описание:
 											span=item.description
-										.product-count
-											p.product-label.bold Количество:
-											.product-choose-count
-												span.product-choose-count-choosen
-												ul.product-choose-count-list
-													each item in prodCout
-														li.product-list-item=item
+										//- .product-count
+										//- 	p.product-label.bold Количество:
+										//- 	.product-choose-count
+										//- 		span.product-choose-count-choosen
+										//- 		ul.product-choose-count-list
+										//- 			each item in prodCout
+										//- 				li.product-list-item=item
 										a(href="" class="detail-product-request") ЗАПРОСИТЬ ИНФОРМАЦИЮ
 
 							h1(class="pages-title") Похожие товары
@@ -215,25 +215,25 @@ append content
 										img.product-image(src=item.img, alt=item.name)
 										p.product-label Артикул:
 											span=item.art
-										p.product-label Код товара:
-											span=item.code
+										//- p.product-label Код товара:
+										//- 	span=item.code
 										p.product-text=item.description
-										.product-count
-											p.product-label.bold Количество:
-											.product-choose-count
-												span.product-choose-count-choosen
-												ul.product-choose-count-list
-													each item in prodCout
-														li.product-list-item=item
+										//- .product-count
+										//- 	p.product-label.bold Количество:
+										//- 	.product-choose-count
+										//- 		span.product-choose-count-choosen
+										//- 		ul.product-choose-count-list
+										//- 			each item in prodCout
+										//- 				li.product-list-item=item
 										.product-footer
-											.product-footer-left
-												p.product-label.bold Цена:
-													span.price=item.price
-													span.currency=item.currency
+											//- .product-footer-left
+											//- 	p.product-label.bold Цена:
+											//- 		span.price=item.price
+											//- 		span.currency=item.currency
 											.product-footer-right
 												button.item-to-cart
-													img(src="img/white-cart-ico.png", alt="White cart")
-													| В корзину
+													//- img(src="img/white-cart-ico.png", alt="White cart")
+													| Просмотреть позицию
 				.right-content-subscription
 					.content-subscription.right-container
 						span.right-content-subscription-text Подписаться на новостную рассылку
@@ -267,7 +267,7 @@ append content
 										a(href="") Новости
 					.right-content-footer-contacts
 						h4.title Наш адрес
-						p.footer-contacts-text 115088, г. Москва, ул. Южнопортовая, д. 9, стр. 10. Ближайшее метро: «Кожуховская».
+						p.footer-contacts-text Россия, Москва, Шарикоподшипниковская улица, 38с1м. Дубровка
 						p.footer-contacts-text
-							span +7 495 22-33-55-4
-							span Пн-Пт с 08-00 до 17-00s
+							span +7 (495)223-35-54
+							span Пн-Пт с 08-00 до 17-00
