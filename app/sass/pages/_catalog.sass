@@ -19,6 +19,7 @@
 			box-shadow: 0 2px 10px rgba(183, 183, 183, 0.5)
 			background-color: #ffffff
 			padding: 15px
+			transition: .3s
 
 			&:nth-of-type(3n)
 				margin-right: 0px
@@ -34,6 +35,34 @@
 
 				& img
 					max-width: 100%
+
+			&.list-view
+				transition: .3s
+				flex-direction: row
+				width: 100%
+				margin: 0
+				margin-bottom: 20px
+				align-items: center
+				justify-content: space-between
+
+				& .product-image
+					width: 150px
+					height: auto
+					margin: 0
+				
+				& .product-text-block
+					display: flex
+					justify-content: flex-start
+					flex-direction: column
+					padding: 0px 10px
+					width: calc(100% - 400px)
+
+				& .item-to-cart
+					padding: 0px 10px
+					font-size: 12px
+				
+				& .product-footer
+					width: 185px
 
 .page-settings
 	width: 100%
@@ -243,10 +272,14 @@
 		&:nth-of-type(even)
 			margin-right: 0px
 
+	.catalog-content__list .product.list-view
+		margin-right: 0px !important
+
 @include media( 1069 )
 	.catalog-content__list .product
 		width: 48%
-
+	.catalog-content__list .product.list-view
+		width: 100%
 @include media( 760 )
 	.page-settings .page-settings-left .page-settings-show,
 	.page-settings .page-settings-left .page-setting-choose-show,

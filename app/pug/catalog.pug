@@ -213,19 +213,21 @@ append content
 							.catalog-content__list
 								each item in products
 									.product
-										img.product-image(src=item.img, alt=item.name)
-										p.product-label Артикул:
-											span=item.art
-										//- p.product-label Код товара:
-										//- 	span=item.code
-										p.product-text=item.description
-										//- .product-count
-										//- 	p.product-label.bold Количество:
-										//- 	.product-choose-count
-										//- 		span.product-choose-count-choosen
-										//- 		ul.product-choose-count-list
-										//- 			each item in prodCout
-										//- 				li.product-list-item=item
+										.product-image
+											img(src=item.img, alt=item.name)
+										.product-text-block
+											p.product-label Артикул:
+												span=item.art
+											//- p.product-label Код товара:
+											//- 	span=item.code
+											p.product-text=item.description
+											//- .product-count
+											//- 	p.product-label.bold Количество:
+											//- 	.product-choose-count
+											//- 		span.product-choose-count-choosen
+											//- 		ul.product-choose-count-list
+											//- 			each item in prodCout
+											//- 				li.product-list-item=item
 										.product-footer
 											//- .product-footer-left
 											//- 	p.product-label.bold Цена:

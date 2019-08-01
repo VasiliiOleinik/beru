@@ -236,10 +236,12 @@ $(document).ready(function() {
   $('.tile-view').on('click', function(){
     $('.list-view').removeClass('active');
     $(this).addClass('active');
+    $('.product').removeClass('list-view');
   });
   $('.list-view').on('click', function(){
     $('.tile-view').removeClass('active');
     $(this).addClass('active');
+    $('.product').addClass('list-view');
   });
 
 
