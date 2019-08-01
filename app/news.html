@@ -11,7 +11,6 @@
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
     <link href="css/owl.carousel.min.css" rel="stylesheet">
-    <link href="css/mmenu.css" rel="stylesheet">
     <link href="css/hamburgers.css" rel="stylesheet">
     <link type="text/css" href="css/main.css" rel="stylesheet">
     <title>Beru </title>
@@ -37,7 +36,7 @@
                 <div class="contacts-text"><a class="phone" href="tel:74952233554">+7 495 22-33-55-4</a>
                   <p class="time">Пн-Пт с 08-00 до 17-00</p>
                 </div>
-                <div class="contacts-img"><a href="tel:74952233554"><img src="img/header-call.png" alt="Header call"></a></div>
+                <div class="contacts-img"><a data-fancybox data-src="#hidden-content" href="javascript:;"><img src="img/header-call.png" alt="Header call"></a></div>
               </div>
             </div>
           </div>
@@ -426,12 +425,18 @@
       </ul>
     </nav>
     <div class="menu-overlay"></div>
+    <div class="call-back-modal" id="hidden-content" style="display: none;">
+      <div class="call-back-inner-block">
+        <input class="call-back-modal-inp" type="text" name="name" placeholder="Ваше имя">
+        <input class="call-back-modal-inp" type="text" name="phone" placeholder="Ваш телефон">
+        <button class="send-call-back" type="submit">Отправить</button>
+      </div>
+    </div>
     <script src="js/libs.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mmenu.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

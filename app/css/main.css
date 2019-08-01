@@ -602,6 +602,44 @@ select, input, textarea {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
+.call-back-inner-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 400px;
+  width: 100%; }
+  .call-back-inner-block .call-back-modal-inp {
+    width: 100%;
+    height: 40px;
+    background-color: #e6e6e6;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px;
+    color: #3a4e5f;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px; }
+  .call-back-inner-block .send-call-back {
+    margin: 0 auto;
+    width: 100%;
+    height: 35px;
+    background-color: #ff0000;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase; }
+
 @media (max-width: 767px) {
   .right-content__breadcrumbs .breadcrumb-list .breadcrumb-item.current {
     display: none; }
