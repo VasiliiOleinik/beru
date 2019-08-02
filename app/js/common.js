@@ -314,4 +314,8 @@ $(document).ready(function() {
       $(this).find('.checkbox-default').attr('checked',false);
     }
   });
+
+  // Проверка email
+
+
 });
