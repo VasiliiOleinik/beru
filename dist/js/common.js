@@ -303,4 +303,15 @@ $(document).ready(function() {
     $(this).toggleClass('rotate');
   });
 
+
+  // Кастомный чекбокс
+  $('.styled-checkbox').on('click', function(){
+    $(this).toggleClass('checked');
+
+    if($(this).hasClass('checked')){
+      $(this).find('.checkbox-default').attr('checked',true);
+    } else {
+      $(this).find('.checkbox-default').attr('checked',false);
+    }
+  });
 });

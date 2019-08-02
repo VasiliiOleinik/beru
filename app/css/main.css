@@ -245,7 +245,7 @@ select, input, textarea {
     margin: 5px 0px 10px 0px;
     color: #333333;
     font-size: 14px;
-    font-weight: 600; }
+    font-weight: 400; }
   .product .product-count {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3594,6 +3594,20 @@ h3.title {
       font-weight: 700; }
     .partners-content__description .partners-tab-text.uppercase {
       text-transform: uppercase; }
+    .partners-content__description .partners-tab-text.link {
+      color: #1f1f1f;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 0px; }
+      .partners-content__description .partners-tab-text.link img {
+        width: 25px;
+        margin-left: 5px; }
   .partners-content__description .partners-tab-list {
     margin-bottom: 20px; }
     .partners-content__description .partners-tab-list .partners-tab-text {
@@ -3718,7 +3732,7 @@ h3.title {
         .detail-product-content .detail-product-info .detail-product-info-text span {
           color: #333333;
           font-family: "Open Sans";
-          font-weight: 600;
+          font-weight: 400;
           padding-left: 5px; }
         .detail-product-content .detail-product-info .detail-product-info-text.description {
           display: -webkit-box;
