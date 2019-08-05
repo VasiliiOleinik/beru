@@ -556,6 +556,12 @@ h3.title
 .menu-overlay,
 .mobile-catalog-section
 	display: none
+@include media( 2560 )
+	.main__right-content .right-content__slider .main-carousel img
+		max-height: 680px
+@include media( 1920 )
+	.main__right-content .right-content__slider .main-carousel img
+		max-height: 480px
 @include media( 1600 )
 	.content-wrapper
 		& .header__catalog
@@ -610,6 +616,8 @@ h3.title
 		margin-bottom: 20px
 	.content-wrapper .main__right-content .right-content-footer
 		flex-direction: column
+	.main__right-content .right-content__slider .main-carousel img
+		max-height: 400px
 @include media( 1200 )
 	.content-wrapper
 		& .main__right-content
@@ -847,7 +855,8 @@ h3.title
 
 							& a
 								color: #ffffff
-
+	.main__right-content .right-content__slider .main-carousel img
+		max-height: 480px
 
 @include media( 767 )
 	.content-wrapper

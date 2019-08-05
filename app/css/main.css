@@ -245,7 +245,9 @@ select, input, textarea {
     margin: 5px 0px 10px 0px;
     color: #333333;
     font-size: 14px;
-    font-weight: 400; }
+    font-weight: 400;
+    height: 40px;
+    overflow: hidden; }
   .product .product-count {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1450,6 +1452,14 @@ h3.title {
 .mobile-catalog-section {
   display: none; }
 
+@media (max-width: 2560px) {
+  .main__right-content .right-content__slider .main-carousel img {
+    max-height: 680px; } }
+
+@media (max-width: 1920px) {
+  .main__right-content .right-content__slider .main-carousel img {
+    max-height: 480px; } }
+
 @media (max-width: 1600px) {
   .content-wrapper .header__catalog {
     display: none; }
@@ -1507,7 +1517,9 @@ h3.title {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; } }
+            flex-direction: column; }
+  .main__right-content .right-content__slider .main-carousel img {
+    max-height: 400px; } }
 
 @media (max-width: 1200px) {
   .content-wrapper .main__right-content {
@@ -1862,7 +1874,9 @@ h3.title {
                   -ms-flex-align: center;
                       align-items: center; }
               .mobile-catalog-section .mobile-catalog .mobile-catalog-list .mobile-catalog-list-item .mobile-catalog-sub-list .mobile-catalog-sub-list-item a {
-                color: #ffffff; } }
+                color: #ffffff; }
+  .main__right-content .right-content__slider .main-carousel img {
+    max-height: 480px; } }
 
 @media (max-width: 767px) {
   .content-wrapper .main__right-content .right-content__header .content-header-search form .seach-input {
@@ -2617,7 +2631,8 @@ h3.title {
                 align-items: center;
         margin-bottom: 10px; }
         .catalog-content__list .product-image img {
-          max-width: 100%; }
+          max-width: 100%;
+          max-height: 190px; }
       .catalog-content__list .product.list-view {
         -webkit-transition: .3s;
         -o-transition: .3s;
@@ -3621,8 +3636,7 @@ h3.title {
 
 @media (max-width: 450px) {
   .partners-content .partners-content__tabs li {
-    width: 100%;
-    margin-bottom: 10px; }
+    width: 100%; }
     .partners-content .partners-content__tabs li .partners-tab {
       width: 100%; } }
 
@@ -3835,7 +3849,10 @@ h3.title {
   .detail-product-content .detail-product__list {
     margin-bottom: 60px; }
     .detail-product-content .detail-product__list .product {
-      height: 435px; }
+      height: auto; }
+      .detail-product-content .detail-product__list .product .product-text {
+        height: 40px;
+        overflow: hidden; }
 
 @media (max-width: 767px) {
   .detail-product-content .detail-product {

@@ -340,7 +340,7 @@
                     </div>
                     <h1 class="pages-title">Напишите нам</h1>
                     <div class="contacts-content__form">
-                      <form action="">
+                      <form action="" id="contact_form">
                         <div class="contacts-content__form-inputs">
                           <div class="label">
                             <input class="input" type="text" name="name">
@@ -351,22 +351,22 @@
                             <label for="phone">Ваш телефон<span>*</span></label>
                           </div>
                           <div class="label">
-                            <input class="input" type="text" name="e-mail">
+                            <input class="input" type="text" name="email" id="mail">
                             <label for="e-mail">Ваш e-mail<span>*</span></label>
                           </div>
                         </div>
                         <div class="contacts-content__form-textarea">
                           <div class="label">
-                            <textarea class="input" name="message"></textarea>
+                            <textarea class="input" name="mess"></textarea>
                             <label for="message">Ваше сообщение<span>*</span></label>
                           </div>
                         </div>
                         <div class="contacts-content__form-checkbox">
                           <label class="styled-checkbox" for="">
-                            <input class="checkbox-default" type="checkbox"><span class="checkbox-custom"></span><span class="checbox-custom-text">Согласие на сбор и обработку личных данных, а также согласие с правилами конфеденциальности и политикой безопасности</span>
+                            <input class="checkbox-default" type="checkbox" name="check"><span class="checkbox-custom"></span><span class="checbox-custom-text">Согласие на сбор и обработку личных данных, а также согласие с правилами конфеденциальности и политикой безопасности</span>
                           </label>
                         </div>
-                        <button class="send-msg-btn" type="submit">Отправить сообщение</button>
+                        <button class="send-msg-btn" id="submit-contact" type="submit">Отправить сообщение</button>
                       </form>
                     </div>
                   </div>
@@ -450,6 +450,7 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

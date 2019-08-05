@@ -247,7 +247,7 @@ append content
 
 							h1(class="pages-title") Напишите нам
 							.contacts-content__form
-								form(action="")
+								form(action="" id="contact_form")
 									.contacts-content__form-inputs
 										.label
 											input(type="text" name="name" class="input")
@@ -258,20 +258,20 @@ append content
 											label(for="phone") Ваш телефон
 												span *
 										.label
-											input(type="text" name="e-mail" class="input")
+											input(type="text" name="email" class="input" id="mail")
 											label(for="e-mail") Ваш e-mail
 												span *
 									.contacts-content__form-textarea
 										.label
-											textarea(name="message" class="input")
+											textarea(name="mess" class="input")
 											label(for="message") Ваше сообщение
 												span *
 									.contacts-content__form-checkbox
 										label(for="", class="styled-checkbox")
-											input(type="checkbox" class="checkbox-default")
+											input(type="checkbox" class="checkbox-default" name="check")
 											span(class="checkbox-custom")
 											span(class="checbox-custom-text") Согласие на сбор и обработку личных данных, а также согласие с правилами конфеденциальности и политикой безопасности
-									button(class="send-msg-btn" type="submit") Отправить сообщение
+									button#submit-contact(class="send-msg-btn" type="submit") Отправить сообщение
 				.right-content-subscription
 					.content-subscription.right-container
 						span.right-content-subscription-text Подписаться на новостную рассылку
