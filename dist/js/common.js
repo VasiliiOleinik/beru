@@ -196,19 +196,6 @@ $(document).ready(function() {
     $(".partners-content__tabs .partners-tab").removeClass("active");
     $(this).addClass("active");
   });
-  // Скрываю label когда input активен
-  $(" .label .input").on("click", function() {
-    $(this)
-      .siblings("label")
-      .css({ opacity: "0", transition: ".2s ease-in-out" });
-  });
-  $(".label .input").on("blur", function() {
-    if ($(this).val().length == "") {
-      $(this)
-        .siblings("label")
-        .css({ opacity: "1", transition: ".2s ease-in-out" });
-    }
-  });
 
   // Сортировки
   $(".choose-sort").on("click", function() {
@@ -317,6 +304,20 @@ $(document).ready(function() {
     $(this).toggleClass("rotate");
   });
 
+  $('.catalog-item-link').hover(function(){
+    $(this).find('img').attr('src',"img/catalog-item-arr-red.png");
+  }, function(){
+    $(this).find('img').attr('src',"img/catalog-item-arr.png");
+  });
+
+  $('.catalog-sub-list-item').hover(function(){
+    $(this).parent().siblings('.catalog-item-link').addClass('active');
+      $(this).parent().siblings('.catalog-item-link').find('img').attr('src',"img/catalog-item-arr-red.png");
+  }, function(){
+    $(this).parent().siblings('.catalog-item-link').removeClass('active');
+    $(this).parent().siblings('.catalog-item-link').find('img').attr('src',"img/catalog-item-arr.png");
+  });
+
   // Кастомный чекбокс
   $(".styled-checkbox").on("click", function() {
     $(this).toggleClass("checked");
@@ -329,6 +330,42 @@ $(document).ready(function() {
       $(this)
         .find(".checkbox-default")
         .attr("checked", false);
+    }
+  });
+
+  // Динамические label
+  $(
+    ".contacts-content__form-inputs input, .contacts-content__form-textarea textarea"
+  ).on("click", function() {
+    $(this)
+      .siblings(".dynamic-label")
+      .css({
+        transition: ".1s ease-in-out",
+        top: "-7px",
+        "z-index": "5",
+        padding: "0px 10px",
+        background: "#ffff",
+        left: "15px",
+        "font-size": "10px",
+        "box-shadow": "0px 0px 3px 0px rgba(0,0,0,0.1)"
+      });
+  });
+  $(
+    ".contacts-content__form-inputs input, .contacts-content__form-textarea textarea"
+  ).on("blur", function() {
+    if ($(this).val().length == "") {
+      $(this)
+      .siblings(".dynamic-label")
+        .css({
+          transition: ".1s ease-in-out",
+          top: "17px",
+          "z-index": "1",
+          padding: "0px",
+          background: "transparent",
+          left: "15px",
+          "font-size": "15px",
+          "box-shadow": "none"
+        });
     }
   });
 
@@ -375,7 +412,7 @@ $(document).ready(function() {
         required: true
       },
       name: {
-        minlength: 6,
+        minlength: 2,
         required: true
       },
       phone: {
@@ -387,12 +424,15 @@ $(document).ready(function() {
       mess: {
         minlength: 10,
         required: true
-      }
+      },
+      // check: {
+      //   required: true
+      // }
     },
     messages: {
       name: {
         required: "Поле обязательно для заполнения",
-        minlength: "Минимальная длина пароля - 6 символов"
+        minlength: "Минимальная длина имени - 2 символа"
       },
       email: {
         required: "Поле обязательно для заполнения",
@@ -413,4 +453,10 @@ $(document).ready(function() {
       }
     }
   });
+  $("#cont-phone").keypress(function(e) {
+    if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
+    return false;
+    }
+    });
+
 });
