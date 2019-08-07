@@ -111,6 +111,13 @@
 						& span
 							color: #fe1818
 
+						&.invalid
+							position: absolute
+							top: 100%
+							color: red
+							font-size: 10px
+							left: 22px
+
 			& .contacts-content__form-textarea
 				width: 100%
 				display: flex
@@ -129,6 +136,9 @@
 				width: 100%
 				display: flex
 				margin-bottom: 30px
+
+
+
 
 @include media( 1600 )
 	.contacts-content__list .contact-item

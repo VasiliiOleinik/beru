@@ -251,20 +251,20 @@ append content
 									.contacts-content__form-inputs
 										.label
 											input(type="text" name="name" class="input")
-											label(for="name") Ваше имя
+											label(for="name" class="dynamic-label") Ваше имя
 												span *
 										.label
-											input(type="text" name="phone" class="input")
-											label(for="phone") Ваш телефон
+											input(type="text" name="phone" class="input" id="cont-phone")
+											label(for="phone" class="dynamic-label") Ваш телефон
 												span *
 										.label
 											input(type="text" name="email" class="input" id="mail")
-											label(for="e-mail") Ваш e-mail
+											label(for="e-mail" class="dynamic-label") Ваш e-mail
 												span *
 									.contacts-content__form-textarea
 										.label
 											textarea(name="mess" class="input")
-											label(for="message") Ваше сообщение
+											label(for="message" class="dynamic-label") Ваше сообщение
 												span *
 									.contacts-content__form-checkbox
 										label(for="", class="styled-checkbox")

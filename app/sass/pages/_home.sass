@@ -54,7 +54,6 @@ h3.title
 
 					& .catalog-list-item
 						width: 100%
-						padding: 10px 0px
 						display: flex
 						align-items: center
 						border-bottom: 1px solid rgba(160, 167, 176, .1)
@@ -68,13 +67,15 @@ h3.title
 							justify-content: space-between
 							align-items: center
 							width: 100%
+							padding: 10px 0px
 
 							& img
 								margin: 0px 5px
 								opacity: 0.7
 								transition: .3s
 
-							&:hover
+							&:hover,
+							&.active
 								color: #ffffff
 								font-size: 14px
 								font-weight: 600
@@ -97,7 +98,6 @@ h3.title
 							& .catalog-sub-list-item
 								display: flex
 								width: 100%
-								margin-bottom: 10px
 								align-items: center
 
 								& a
@@ -105,6 +105,12 @@ h3.title
 									font-family: "Open Sans"
 									font-size: 13px
 									font-weight: 400
+									margin-bottom: 10px
+
+									&:hover
+										color: #ffffff
+										transition: .3s
+
 
 							
 						
