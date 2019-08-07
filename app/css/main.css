@@ -2547,7 +2547,12 @@ h3.title {
   .brand-content__list-container .brand-item, .brand-content__list-container .brand-item:nth-of-type(3n) {
     margin-right: 20px; }
   .brand-content__list-container .brand-item:nth-of-type(4n) {
-    margin-right: 0px; } }
+    margin-right: 0px; }
+  .brand-content__list-container {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
 
 @media (max-width: 885px) {
   .brand-content__list-container .brand-item, .brand-content__list-container .brand-item:nth-of-type(4n) {
