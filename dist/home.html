@@ -392,8 +392,11 @@
               </div>
               <div class="right-content-subscription">
                 <div class="content-subscription right-container"><span class="right-content-subscription-text">Подписаться на новостную рассылку</span>
-                  <form class="right-content-subscription-form" action="">
-                    <input class="subscription-input" type="text" placeholder="Введите свою электроную почту" id="mail">
+                  <form class="right-content-subscription-form" action="" id="subscription-form">
+                    <div class="label">
+                      <input class="subscription-input" type="text" id="mail" name="email">
+                      <label class="dynamic-label" for="email">Введите свою электроную почту<span>*</span></label>
+                    </div>
                     <button class="subscription-btn" id="submit" type="submit"><img src="img/red-right-arr.png" alt="Subscription btn"></button>
                   </form>
                 </div>

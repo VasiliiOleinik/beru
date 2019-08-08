@@ -336,8 +336,11 @@ append content
 				.right-content-subscription
 					.content-subscription.right-container
 						span.right-content-subscription-text Подписаться на новостную рассылку
-						form.right-content-subscription-form(action="")
-							input.subscription-input(type="text" placeholder="Введите свою электроную почту" id="mail")
+						form.right-content-subscription-form(action="" id='subscription-form')
+							.label
+								input.subscription-input(type="text" id="mail" name="email")
+								label(for="email" class="dynamic-label") Введите свою электроную почту
+									span *
 							button.subscription-btn#submit(type="submit")
 								img(src="img/red-right-arr.png", alt="Subscription btn")
 				.right-content-footer.right-container

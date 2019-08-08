@@ -1260,7 +1260,6 @@ h3.title {
           display: flex;
           width: 100%;
           height: 50px;
-          background-color: #e6e6e6;
           -webkit-box-align: center;
           -webkit-align-items: center;
               -ms-flex-align: center;
@@ -1269,11 +1268,20 @@ h3.title {
           color: #3a4e5f;
           font-family: "Open Sans";
           font-size: 14px;
-          font-weight: 400; }
+          font-weight: 400;
+          position: relative;
+          z-index: 2; }
         .main__right-content .right-content-subscription .content-subscription .right-content-subscription-form .subscription-btn {
           width: 50px;
           height: 50px;
           background-color: #1a2533; }
+        .main__right-content .right-content-subscription .content-subscription .right-content-subscription-form .label {
+          width: 100%;
+          background-color: #e6e6e6; }
+          .main__right-content .right-content-subscription .content-subscription .right-content-subscription-form .label label.invalid {
+            color: #ffffff; }
+          .main__right-content .right-content-subscription .content-subscription .right-content-subscription-form .label .dynamic-label {
+            z-index: 1; }
   .main__right-content .right-content-footer {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3755,7 +3763,8 @@ h3.title {
           width: 125px;
           height: 125px;
           -o-object-fit: cover;
-             object-fit: cover; }
+             object-fit: cover;
+          margin: 0 auto; }
     .detail-product-content .detail-product-info {
       display: -webkit-box;
       display: -webkit-flex;

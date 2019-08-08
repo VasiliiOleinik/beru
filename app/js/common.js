@@ -335,7 +335,7 @@ $(document).ready(function() {
 
   // Динамические label
   $(
-    ".contacts-content__form-inputs input, .contacts-content__form-textarea textarea"
+    ".contacts-content__form-inputs input, .contacts-content__form-textarea textarea, .right-content-subscription-form input"
   ).on("click", function() {
     $(this)
       .siblings(".dynamic-label")
@@ -351,7 +351,7 @@ $(document).ready(function() {
       });
   });
   $(
-    ".contacts-content__form-inputs input, .contacts-content__form-textarea textarea"
+    ".contacts-content__form-inputs input, .contacts-content__form-textarea textaream, .right-content-subscription-form input"
   ).on("blur", function() {
     if ($(this).val().length == "") {
       $(this)
@@ -382,28 +382,8 @@ $(document).ready(function() {
     }
   });
 
-  // Проверка подписки
-  var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i,
-    mail = $("#mail");
-  mail.blur(function() {
-    if (mail.val() != "") {
-      if (mail.val().search(pattern) == 0) {
-        $("#valid").text("Подходит");
-        $("#submit").attr("disabled", false);
-        mail.removeClass("error").addClass("ok");
-      } else {
-        $("#valid").text("Не подходит");
-        $("#submit").attr("disabled", true);
-        mail.addClass("ok");
-      }
-    } else {
-      $("#valid").text("Поле e-mail не должно быть пустым!");
-      mail.addClass("error");
-      $("#submit").attr("disabled", true);
-    }
-  });
-
-  $("#contact_form").validate({
+  // Валидация
+  $("#contact_form, #subscription-form").validate({
     errorClass: "invalid",
     validClass: "success",
     rules: {
