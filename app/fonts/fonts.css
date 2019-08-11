@@ -2,3 +2,63 @@
   font-family: "Corinthia";
   src: url("/fonts/corinthia.ttf") format("ttf"), url("/fonts/corinthia.woff") format("woff");
 }
+@font-face {
+  font-family: "NotoSans-BoldItalic";
+  src: url("/fonts/NotoSans-BoldItalic.ttf") format("ttf");
+}
+@font-face {
+  font-family: "NotoSans-Italic";
+  src: url("/fonts/NotoSans-Italic.ttf") format("ttf");
+}
+@font-face {
+  font-family: "NotoSans-Regular";
+  src: url("/fonts/NotoSans-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "NotoSans-Bold";
+  src: url("/fonts/NotoSans-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("/fonts/OpenSans-Bold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-BoldItalic";
+  src: url("/fonts/OpenSans-BoldItalic.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("/fonts/OpenSans-ExtraBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-ExtraBoldItalic";
+  src: url("/fonts/OpenSans-ExtraBoldItalic.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-Italic";
+  src: url("/fonts/corinthia.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-Italic";
+  src: url("/fonts/OpenSans-Italic.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("/fonts/OpenSans-Light.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-LightItalic";
+  src: url("/fonts/OpenSans-LightItalic.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("/fonts/OpenSans-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("/fonts/OpenSans-SemiBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "OpenSans-SemiBoldItalic";
+  src: url("/fonts/OpenSans-SemiBoldItalic.ttf") format("ttf");
+}

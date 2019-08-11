@@ -439,4 +439,10 @@ $(document).ready(function() {
     }
     });
 
+    $('.contacts-img').hover(function(){
+      $(this).find('img').attr('src','img/phone.gif');
+    }, function() {
+      $(this).find('img').attr('src','img/phone.png');
+    });
+
 });

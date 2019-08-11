@@ -40,8 +40,8 @@ append content
 		];
 
 		var slider = [
-			'img/slide-img2.jpg',
-			'img/slide-img3.jpg',
+			'img/new-slide.jpg',
+			'img/new-slide.jpg',
 		];
 
 		var tabProdFirst = [
@@ -142,11 +142,11 @@ append content
 	main.main
 		.main__content
 			.main__left-content
-				.left-content-container
-					.left-containe-logo
+				.main-left-logo-block
+					.main-left-logo-container
 						a(href="")
-							img.logo-img(src="img/logo.png", alt="Logo")
-							span.logo-text Торговый дом «Беру»
+							img.logo-img(src="img/logo.svg", alt="Logo")
+				.left-content-container
 					.left-container-catalog
 						h3.title Каталог
 						ul.catalog-list
@@ -180,7 +180,7 @@ append content
 						form(action="")
 							input.seach-input(type="text" placeholder="Поиск по сайту")
 							button.search-btn
-								img(src="img/search-ico.png", alt="Search ico")
+								img(src="img/search-ico.svg", alt="Search ico")
 					//- .content-header-cart
 					//-     a.main-cart-btn(href="")
 					//-         img(src="img/cart-ico.png", alt="Cart ico")
@@ -210,9 +210,9 @@ append content
 						each item in slider
 							.item
 								img(src=item, alt="")
-								.slide-info-block
-									span.slide-info-block-text Щетки -пыльники «LiSa»
-									img.slide-info-block-image(src="img/lisa-logo.png", alt="")
+								//- .slide-info-block
+								//- 	span.slide-info-block-text Щетки -пыльники «LiSa»
+								//- 	img.slide-info-block-image(src="img/lisa-logo.png", alt="")
 				.right-content__tabs.right-container.slider
 					.catalog-slider
 						//- each item in elements
@@ -333,16 +333,16 @@ append content
 					//-                         button.item-to-cart
 					//-                             img(src="img/white-cart-ico.png", alt="White cart")
 					//-                             | В корзину
-				.right-content-subscription
-					.content-subscription.right-container
-						span.right-content-subscription-text Подписаться на новостную рассылку
-						form.right-content-subscription-form(action="" id='subscription-form')
-							.label
-								input.subscription-input(type="text" id="mail" name="email")
-								label(for="email" class="dynamic-label") Введите свою электроную почту
-									span *
-							button.subscription-btn#submit(type="submit")
-								img(src="img/red-right-arr.png", alt="Subscription btn")
+				//- .right-content-subscription
+					//- .content-subscription.right-container
+					//- 	span.right-content-subscription-text Подписаться на новостную рассылку
+					//- 	form.right-content-subscription-form(action="" id='subscription-form')
+					//- 		.label
+					//- 			input.subscription-input(type="text" id="mail" name="email")
+					//- 			label(for="email" class="dynamic-label") Введите свою электроную почту
+					//- 				span *
+					//- 		button.subscription-btn#submit(type="submit")
+					//- 			img(src="img/red-right-arr.png", alt="Subscription btn")
 				.right-content-footer.right-container
 					.right-content-footer-sitemap
 						h4.title Карта сайта
@@ -369,7 +369,7 @@ append content
 										a(href="") Новости
 					.right-content-footer-contacts
 						h4.title Наш адрес
-						p.footer-contacts-text Россия, Москва, Шарикоподшипниковская улица, 38с1м. Дубровка
+						p.footer-contacts-text Россия, Москва, улица Шарикоподшипниковская улица, дом 38 стр1. Станция метро «Дубровка»
 						p.footer-contacts-text
 							span +7 (495)223-35-54
 							span Пн-Пт с 08-00 до 17-00
