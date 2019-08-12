@@ -16,7 +16,7 @@ h3.title
 		background-color: #1b2633
 		// border-top: 30px solid #3a4e5f
 		// border-right: 30px solid #3a4e5f
-		justify-content: flex-end
+		justify-content: flex-start
 		flex-direction: column
 		align-items: flex-end
 		
@@ -331,6 +331,7 @@ h3.title
 						top: -70%
 				& img
 					max-height: 520px
+					object-fit: cover
 
 			& .owl-dots
 				position: absolute
@@ -601,10 +602,10 @@ h3.title
 	display: none
 @include media( 2560 )
 	.main__right-content .right-content__slider .main-carousel img
-		max-height: 680px
+		max-height: 850px
 @include media( 1920 )
 	.main__right-content .right-content__slider .main-carousel img
-		max-height: 520px
+		max-height: 630px
 @include media( 1600 )
 	.content-wrapper
 		& .header__catalog

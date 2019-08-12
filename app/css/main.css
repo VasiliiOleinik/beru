@@ -705,10 +705,10 @@ h3.title {
   display: flex;
   width: 34%;
   background-color: #1b2633;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1120,7 +1120,9 @@ h3.title {
         position: relative;
         top: -70%; }
     .main__right-content .right-content__slider .main-carousel img {
-      max-height: 520px; }
+      max-height: 520px;
+      -o-object-fit: cover;
+         object-fit: cover; }
     .main__right-content .right-content__slider .owl-dots {
       position: absolute;
       bottom: 130px;
@@ -1512,11 +1514,11 @@ h3.title {
 
 @media (max-width: 2560px) {
   .main__right-content .right-content__slider .main-carousel img {
-    max-height: 680px; } }
+    max-height: 850px; } }
 
 @media (max-width: 1920px) {
   .main__right-content .right-content__slider .main-carousel img {
-    max-height: 520px; } }
+    max-height: 630px; } }
 
 @media (max-width: 1600px) {
   .content-wrapper .header__catalog {

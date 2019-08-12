@@ -1,0 +1,62 @@
+-
+	var catalog = [
+		'Автоаксессуары',
+		'Автосвет',
+		'Автохимия',
+		'Ароматизаторы',
+		'Инструмент',
+		'Товары для ремонта сервиса',
+		'Товары для ухода за автомобилем',
+		'Щетки стеклоочистителя',
+		'Электроника и электротехника автомобильная',
+	];
+
+	var subCatalog = [
+		'Аксессуары автомобильные',
+		'Оплетки рулевого колеса',
+		'Чехлы и накидки на сидения, поддержка поясничная',
+		'Ю.Корея АUTOBAN Аксессуары',
+	]
+
+	var news = [
+		{
+			img: 'img/news.jpg',
+			name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+			date: '19.09.2019',
+		},
+		{
+			img: 'img/news.jpg',
+			name: 'ТД «БЕРУ» на выставке ИНТЕРАВТО 2019',
+			date: '19.09.2019',
+		},
+	];
+
+
+.main__left-content
+	.main-left-logo-block
+		.main-left-logo-container
+			a(href="")
+				img.logo-img(src="img/logo.svg", alt="Logo")
+	.left-content-container
+		.left-container-catalog
+			h3.title Каталог
+			ul.catalog-list
+				each item in catalog
+					li.catalog-list-item
+						a.catalog-item-link(href="")
+							span=item
+							img(src="img/catalog-item-arr.png", alt="")
+						ul.catalog-sub-list
+							each item in subCatalog
+								li.catalog-sub-list-item
+									a(href="")=item
+		.left-container-news
+			h3.title Новости
+			.news-list
+				each item in news
+					.news-item
+						a.news-item__img(href="")
+							img(src=item.img, alt=item.name)
+						a.news-item__name(href="")=item.name
+						a.news-item__date(href="")=item.date
+				a.show-all-news-btn(href="") Все новости
