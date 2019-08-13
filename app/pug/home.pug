@@ -148,163 +148,164 @@ append content
 								//- .slide-info-block
 								//- 	span.slide-info-block-text Щетки -пыльники «LiSa»
 								//- 	img.slide-info-block-image(src="img/lisa-logo.png", alt="")
-				.right-content__tabs.right-container.slider
-					.catalog-slider
-						//- each item in elements
-						.main-catalog-item
-							.main-catalog-item-img.owl-carousel
-								a(href="")
-									img(src="../img/new1.jpeg", alt="")
-								a(href="")
-									img(src="../img/new2.jpeg", alt="")
-								a(href="")
-									img(src="../img/new3.jpeg", alt="")
-							.main-catalog-item-name
-								a(href="") Новинки
-						.main-catalog-item
-							.main-catalog-item-img.owl-carousel
-								a(href="")
-									img(src="../img/hit1.jpeg", alt="")
-								a(href="")
-									img(src="../img/hit2.jpeg", alt="")
-								a(href="")
-									img(src="../img/hit3.jpeg", alt="")
-							.main-catalog-item-name
-								a(href="") Хиты продаж
-						.main-catalog-item
-							.main-catalog-item-img.owl-carousel
-								a(href="")
-									img(src="../img/prop1.jpeg", alt="")
-								a(href="")
-									img(src="../img/prop2.jpeg", alt="")
-								a(href="")
-									img(src="../img/prop3.jpeg", alt="")
-							.main-catalog-item-name
-								a(href="") Сезонные предложения
+				.change-background
+					.right-content__tabs.right-container.slider
+						.catalog-slider
+							//- each item in elements
+							.main-catalog-item
+								.main-catalog-item-img.owl-carousel
+									a(href="")
+										img(src="../img/new1.jpeg", alt="")
+									a(href="")
+										img(src="../img/new2.jpeg", alt="")
+									a(href="")
+										img(src="../img/new3.jpeg", alt="")
+								.main-catalog-item-name
+									a(href="") Новинки
+							.main-catalog-item
+								.main-catalog-item-img.owl-carousel
+									a(href="")
+										img(src="../img/hit1.jpeg", alt="")
+									a(href="")
+										img(src="../img/hit2.jpeg", alt="")
+									a(href="")
+										img(src="../img/hit3.jpeg", alt="")
+								.main-catalog-item-name
+									a(href="") Хиты продаж
+							.main-catalog-item
+								.main-catalog-item-img.owl-carousel
+									a(href="")
+										img(src="../img/prop1.jpeg", alt="")
+									a(href="")
+										img(src="../img/prop2.jpeg", alt="")
+									a(href="")
+										img(src="../img/prop3.jpeg", alt="")
+								.main-catalog-item-name
+									a(href="") Сезонные предложения
 
-					//- .right-tabs-block#tabs
-					//-     ul.right-tabs-block__menu
-					//-         li.tab.active
-					//-             a(href="#tab1") Новинки
-					//-         li.tab
-					//-             a(href="#tab2") Сезонные предложения
-					//-         li.tab
-					//-             a(href="#tab3") Хиты
-					//-     h4.tab-block-title Новинки       
-					//-     .right-tabs-block__content#tab1(class="owl-carousel")
-					//-         each item in tabProdFirst
-					//-              .product
-					//-                 img.product-image(src=item.img, alt=item.name)
-					//-                 p.product-label Артикул:
-					//-                     span=item.art
-					//-                 p.product-label Код товара:
-					//-                     span=item.code
-					//-                 p.product-text=item.description
-					//-                 .product-count
-					//-                     p.product-label.bold Количество:
-					//-                     .product-choose-count
-					//-                         span.product-choose-count-choosen
-					//-                         ul.product-choose-count-list
-					//-                             each item in prodCout
-					//-                                 li.product-list-item=item
-					//-                 .product-footer
-					//-                     .product-footer-left
-					//-                         p.product-label.bold Цена:
-					//-                             span.price=item.price
-					//-                             span.currency=item.currency
-					//-                     .product-footer-right
-					//-                         button.item-to-cart
-					//-                             img(src="img/white-cart-ico.png", alt="White cart")
-					//-                             | В корзину
-					//-     h4.tab-block-title Сезонные предложения                       
-					//-     .right-tabs-block__content#tab2(class="owl-carousel")
-					//-         each item in tabProdSecond
-					//-             .product
-					//-                 img.product-image(src=item.img, alt=item.name)
-					//-                 p.product-label Артикул:
-					//-                     span=item.art
-					//-                 p.product-label Код товара:
-					//-                     span=item.code
-					//-                 p.product-text=item.description
-					//-                 .product-count
-					//-                     p.product-label.bold Количество:
-					//-                     .product-choose-count
-					//-                         span.product-choose-count-choosen
-					//-                         ul.product-choose-count-list
-					//-                             each item in prodCout
-					//-                                 li.product-list-item=item
-					//-                 .product-footer
-					//-                     .product-footer-left
-					//-                         p.product-label.bold Цена:
-					//-                             span.price=item.price
-					//-                             span.currency=item.currency
-					//-                     .product-footer-right
-					//-                         button.item-to-cart
-					//-                             img(src="img/white-cart-ico.png", alt="White cart")
-					//-                             | В корзину
-					//-     h4.tab-block-title Хиты
-					//-     .right-tabs-block__content#tab3(class="owl-carousel")
-					//-         each item in tabProdThird
-					//-             .product
-					//-                 img.product-image(src=item.img, alt=item.name)
-					//-                 p.product-label Артикул:
-					//-                     span=item.art
-					//-                 p.product-label Код товара:
-					//-                     span=item.code
-					//-                 p.product-text=item.description
-					//-                 .product-count
-					//-                     p.product-label.bold Количество:
-					//-                     .product-choose-count
-					//-                         span.product-choose-count-choosen
-					//-                         ul.product-choose-count-list
-					//-                             each item in prodCout
-					//-                                 li.product-list-item=item
-					//-                 .product-footer
-					//-                     .product-footer-left
-					//-                         p.product-label.bold Цена:
-					//-                             span.price=item.price
-					//-                             span.currency=item.currency
-					//-                     .product-footer-right
-					//-                         button.item-to-cart
-					//-                             img(src="img/white-cart-ico.png", alt="White cart")
-					//-                             | В корзину
-				//- .right-content-subscription
-					//- .content-subscription.right-container
-					//- 	span.right-content-subscription-text Подписаться на новостную рассылку
-					//- 	form.right-content-subscription-form(action="" id='subscription-form')
-					//- 		.label
-					//- 			input.subscription-input(type="text" id="mail" name="email")
-					//- 			label(for="email" class="dynamic-label") Введите свою электроную почту
-					//- 				span *
-					//- 		button.subscription-btn#submit(type="submit")
-					//- 			img(src="img/red-right-arr.png", alt="Subscription btn")
-				.right-content-footer.right-container
-					.right-content-footer-sitemap
-						h4.title Карта сайта
-						.footer-sitemap-block
-							.footer-sitemap-block-column
-								ul.sitemap-block-column-list
-									li
-										a(href="") Главная
-									li
-										a(href="") О компании
-									li
-										a(href="") Бренды
-							.footer-sitemap-block-column
-								ul.sitemap-block-column-list
-									li
-										a(href="") Клиентам
-									li
-										a(href="") Акции
-									li
-										a(href="") Контакты
-							.footer-sitemap-block-column
-								ul.sitemap-block-column-list
-									li
-										a(href="") Новости
-					.right-content-footer-contacts
-						h4.title Наш адрес
-						p.footer-contacts-text Россия, Москва, улица Шарикоподшипниковская улица, дом 38 стр1. Станция метро «Дубровка»
-						p.footer-contacts-text
-							span +7 (495)223-35-54
-							span Пн-Пт с 08-00 до 17-00
+						//- .right-tabs-block#tabs
+						//-     ul.right-tabs-block__menu
+						//-         li.tab.active
+						//-             a(href="#tab1") Новинки
+						//-         li.tab
+						//-             a(href="#tab2") Сезонные предложения
+						//-         li.tab
+						//-             a(href="#tab3") Хиты
+						//-     h4.tab-block-title Новинки       
+						//-     .right-tabs-block__content#tab1(class="owl-carousel")
+						//-         each item in tabProdFirst
+						//-              .product
+						//-                 img.product-image(src=item.img, alt=item.name)
+						//-                 p.product-label Артикул:
+						//-                     span=item.art
+						//-                 p.product-label Код товара:
+						//-                     span=item.code
+						//-                 p.product-text=item.description
+						//-                 .product-count
+						//-                     p.product-label.bold Количество:
+						//-                     .product-choose-count
+						//-                         span.product-choose-count-choosen
+						//-                         ul.product-choose-count-list
+						//-                             each item in prodCout
+						//-                                 li.product-list-item=item
+						//-                 .product-footer
+						//-                     .product-footer-left
+						//-                         p.product-label.bold Цена:
+						//-                             span.price=item.price
+						//-                             span.currency=item.currency
+						//-                     .product-footer-right
+						//-                         button.item-to-cart
+						//-                             img(src="img/white-cart-ico.png", alt="White cart")
+						//-                             | В корзину
+						//-     h4.tab-block-title Сезонные предложения                       
+						//-     .right-tabs-block__content#tab2(class="owl-carousel")
+						//-         each item in tabProdSecond
+						//-             .product
+						//-                 img.product-image(src=item.img, alt=item.name)
+						//-                 p.product-label Артикул:
+						//-                     span=item.art
+						//-                 p.product-label Код товара:
+						//-                     span=item.code
+						//-                 p.product-text=item.description
+						//-                 .product-count
+						//-                     p.product-label.bold Количество:
+						//-                     .product-choose-count
+						//-                         span.product-choose-count-choosen
+						//-                         ul.product-choose-count-list
+						//-                             each item in prodCout
+						//-                                 li.product-list-item=item
+						//-                 .product-footer
+						//-                     .product-footer-left
+						//-                         p.product-label.bold Цена:
+						//-                             span.price=item.price
+						//-                             span.currency=item.currency
+						//-                     .product-footer-right
+						//-                         button.item-to-cart
+						//-                             img(src="img/white-cart-ico.png", alt="White cart")
+						//-                             | В корзину
+						//-     h4.tab-block-title Хиты
+						//-     .right-tabs-block__content#tab3(class="owl-carousel")
+						//-         each item in tabProdThird
+						//-             .product
+						//-                 img.product-image(src=item.img, alt=item.name)
+						//-                 p.product-label Артикул:
+						//-                     span=item.art
+						//-                 p.product-label Код товара:
+						//-                     span=item.code
+						//-                 p.product-text=item.description
+						//-                 .product-count
+						//-                     p.product-label.bold Количество:
+						//-                     .product-choose-count
+						//-                         span.product-choose-count-choosen
+						//-                         ul.product-choose-count-list
+						//-                             each item in prodCout
+						//-                                 li.product-list-item=item
+						//-                 .product-footer
+						//-                     .product-footer-left
+						//-                         p.product-label.bold Цена:
+						//-                             span.price=item.price
+						//-                             span.currency=item.currency
+						//-                     .product-footer-right
+						//-                         button.item-to-cart
+						//-                             img(src="img/white-cart-ico.png", alt="White cart")
+						//-                             | В корзину
+					//- .right-content-subscription
+						//- .content-subscription.right-container
+						//- 	span.right-content-subscription-text Подписаться на новостную рассылку
+						//- 	form.right-content-subscription-form(action="" id='subscription-form')
+						//- 		.label
+						//- 			input.subscription-input(type="text" id="mail" name="email")
+						//- 			label(for="email" class="dynamic-label") Введите свою электроную почту
+						//- 				span *
+						//- 		button.subscription-btn#submit(type="submit")
+						//- 			img(src="img/red-right-arr.png", alt="Subscription btn")
+					.right-content-footer.right-container
+						.right-content-footer-sitemap
+							h4.title Карта сайта
+							.footer-sitemap-block
+								.footer-sitemap-block-column
+									ul.sitemap-block-column-list
+										li
+											a(href="") Главная
+										li
+											a(href="") О компании
+										li
+											a(href="") Бренды
+								.footer-sitemap-block-column
+									ul.sitemap-block-column-list
+										li
+											a(href="") Клиентам
+										li
+											a(href="") Акции
+										li
+											a(href="") Контакты
+								.footer-sitemap-block-column
+									ul.sitemap-block-column-list
+										li
+											a(href="") Новости
+						.right-content-footer-contacts
+							h4.title Наш адрес
+							p.footer-contacts-text Россия, Москва, улица Шарикоподшипниковская улица, дом 38 стр1. Станция метро «Дубровка»
+							p.footer-contacts-text
+								span +7 (495)223-35-54
+								span Пн-Пт с 08-00 до 17-00
