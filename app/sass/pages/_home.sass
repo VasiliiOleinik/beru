@@ -210,7 +210,7 @@ h3.title
 
 		& .right-content__header
 			display: flex
-			height: 170px
+			height: 353px
 			display: flex
 			align-items: center
 			
@@ -556,7 +556,6 @@ h3.title
 	& .catalog-slider
 		padding: 0px 5px
 		display: flex
-		justify-content: space-between
 		& .main-catalog-item
 			width: 270px
 			height: 300px
@@ -565,6 +564,7 @@ h3.title
 			display: flex
 			flex-direction: column
 			padding: 15px
+			margin-right: 20px
 
 			& .main-catalog-item-img
 				width: 100%
@@ -606,6 +606,11 @@ h3.title
 @include media( 1920 )
 	.main__right-content .right-content__slider .main-carousel img
 		max-height: 630px
+@include media( 1680 )
+	.box
+		max-width: 1265px
+	.main__right-content .right-container
+    	max-width: 870px
 @include media( 1600 )
 	.content-wrapper
 		& .header__catalog
@@ -649,6 +654,11 @@ h3.title
 		height: 250px
 	.right-content__tabs.slider .catalog-slider .main-catalog-item .main-catalog-item-img img
 		width: 100px
+@include media( 1600 )
+	.box
+		max-width: 1150px
+	.main__right-conte4t .right-container
+    	max-width: 790px
 @include media ( 1440 )
 	.content-wrapper .main__right-content .right-content__header
 		max-width: 760px
@@ -662,13 +672,34 @@ h3.title
 		flex-direction: column
 	.main__right-content .right-content__slider .main-carousel img
 		max-height: 480px
+	.main__right-content .right-content__header
+		height: 315px
+@include media( 1280 )
+	.box
+    	max-width: 1100px
+	.content-wrapper .main__right-content .right-content__header
+    	max-width: 715px
 @include media( 1200 )
 	.content-wrapper
 		& .main__right-content
 			width: 70%
 		& .main__left-content
 			width: 30%
-
+		& .main__left-content .main-left-logo-block
+			padding-right: 30px
+		& .main__left-content .left-content-container
+			padding-right: 30px
+		& .main__left-content .main-left-logo-block .main-left-logo-container img
+			width: 250px
+		& .main__right-content .right-container
+			max-width: 770px
+	.box
+		max-width: 1130px
+@include media( 1152 )
+		.box
+			max-width: 1115px
+		.content-wrapper .main__right-content .right-container
+    		max-width: 755px
 @include media( 1024 )
 	.content-wrapper
 		& .main__right-content .right-content-footer .right-content-footer-sitemap
@@ -728,9 +759,9 @@ h3.title
 			justify-content: space-between
 		& .header__contacts .contacts-text .phone
 			font-size: 14px
-		& .header__contacts .contacts-img
-			width: 60px
-			height: 60px
+		// & .header__contacts .contacts-img
+		// 	width: 60px
+		// 	height: 60px
 		& .main__right-content .right-content__header .content-header-user
 			width: 125px
 			height: 30px
@@ -900,7 +931,10 @@ h3.title
 								color: #ffffff
 	.main__right-content .right-content__slider .main-carousel img
 		max-height: 480px
-	
+	.box
+		padding: 0px 15px
+	.content-wrapper .main__right-content .right-content__header
+		height: 120px
 @include media( 767 )
 	.content-wrapper
 		& .main__right-content .right-content__header .content-header-search form .seach-input
