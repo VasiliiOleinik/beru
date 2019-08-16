@@ -950,9 +950,19 @@ h3.title {
   display: flex;
   width: 66%;
   overflow: hidden;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
   .main__right-content .right-container {
     max-width: 935px;
     width: 100%;
@@ -967,7 +977,10 @@ h3.title {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
     .main__right-content .right-content__header .content-header-search {
       width: 330px;
       height: 50px;
@@ -1500,6 +1513,12 @@ h3.title {
 .menu-overlay,
 .mobile-catalog-section {
   display: none; }
+
+.main__right-content > .change-background {
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto; }
 
 @media (max-width: 2560px) {
   .main__right-content .right-content__slider .main-carousel img {

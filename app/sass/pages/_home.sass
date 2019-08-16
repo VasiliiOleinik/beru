@@ -201,7 +201,9 @@ h3.title
 		display: flex
 		width: 66%
 		overflow: hidden
-		flex-wrap: wrap
+		justify-content: flex-start
+		flex-direction: column
+		align-items: flex-start
 
 		& .right-container
 			max-width: 935px
@@ -213,6 +215,7 @@ h3.title
 			height: 170px
 			display: flex
 			align-items: center
+			flex-shrink: 0
 			
 			& .content-header-search
 				width: 330px
@@ -600,6 +603,8 @@ h3.title
 .menu-overlay,
 .mobile-catalog-section
 	display: none
+.main__right-content > .change-background
+	flex: auto
 @include media( 2560 )
 	.main__right-content .right-content__slider .main-carousel img
 		max-height: 850px
