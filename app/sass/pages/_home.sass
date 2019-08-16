@@ -165,7 +165,7 @@ h3.title
 						&__name
 							color: #a0a7b0
 							font-size: 13px
-							font-weight: 400
+							font-weight: 600
 							margin-bottom: 10px
 							transition: .3s
 
@@ -603,9 +603,52 @@ h3.title
 @include media( 2560 )
 	.main__right-content .right-content__slider .main-carousel img
 		max-height: 850px
+	.box
+		max-width: 1540px
+	.main__right-content .right-container
+		max-width: 1145px
+@include media( 2450 )
+	.box
+    	max-width: 1510px
+	.main__right-content .right-container
+    	max-width: 1115px
+@include media( 2350 )
+	.box
+    	max-width: 1475px
+	.main__right-content .right-container
+    	max-width: 1100px
+@include media( 2250 )
+	.box
+    	max-width: 1475px
+	.main__right-content .right-container
+    	max-width: 1065px
+@include media( 2150 )
+	.box
+    	max-width: 1410px
+	.main__right-content .right-container
+    	max-width: 1015px
+@include media( 2050 )
+	.box
+    	max-width: 1380px
+	.main__right-content .right-container
+    	max-width: 1000px
 @include media( 1920 )
 	.main__right-content .right-content__slider .main-carousel img
 		max-height: 630px
+	.box
+		max-width: 1325px
+	.main__right-content .right-container
+		max-width: 935px
+@include media( 1800 )
+	.box
+		max-width: 1280px
+	.main__right-content .right-container
+   		max-width: 895px
+@include media( 1700 )
+	.box
+		max-height: 1260px
+	.main__right-content .right-container
+   		max-width: 870px
 @include media( 1680 )
 	.box
 		max-width: 1265px
@@ -654,17 +697,22 @@ h3.title
 		height: 250px
 	.right-content__tabs.slider .catalog-slider .main-catalog-item .main-catalog-item-img img
 		width: 100px
-@include media( 1600 )
 	.box
-		max-width: 1150px
+		max-width: 1200px
 	.main__right-conte4t .right-container
     	max-width: 790px
+@include media( 1500 )
+	.box
+		max-width: 1170px
+	.content-wrapper .main__right-content .right-container
+    	max-width: 780px
 @include media ( 1440 )
 	.content-wrapper .main__right-content .right-content__header
 		max-width: 760px
-	.header__contacts .contacts-text .phone,
+	.header__contacts .contacts-text .phone
+		font-size: 18px !important
 	.header__nav-link
-		font-size: 15px !important
+		font-size: 16px
 	.main__right-content .right-content-footer .right-content-footer-sitemap
 		width: 100%
 		margin-bottom: 20px
@@ -672,8 +720,11 @@ h3.title
 		flex-direction: column
 	.main__right-content .right-content__slider .main-carousel img
 		max-height: 480px
-	.main__right-content .right-content__header
-		height: 315px
+@include media ( 1350 )
+	.box
+    	max-width: 1125px
+	.content-wrapper .main__right-content .right-content__header
+    	max-width: 730px
 @include media( 1280 )
 	.box
     	max-width: 1100px
@@ -700,8 +751,23 @@ h3.title
 			max-width: 1115px
 		.content-wrapper .main__right-content .right-container
     		max-width: 755px
+@include media( 1090 )
+	.content-wrapper .main__right-content .right-container
+    	max-width: 730px
+@include media( 1060 )
+	.header__contacts .contacts-text .phone
+    	font-size: 14px !important
+	.content-wrapper .main__right-content .right-container
+    	max-width: 710px
+@include media( 1040 )
+	.header__contacts .contacts-text .phone
+    	font-size: 14px !important
+	.content-wrapper .main__right-content .right-container
+    	max-width: 695px
 @include media( 1024 )
 	.content-wrapper
+		& .header__contacts .contacts-text
+			background: transparent
 		& .main__right-content .right-content-footer .right-content-footer-sitemap
 			display: none
 		& .main__left-content

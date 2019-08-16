@@ -121,6 +121,9 @@
 					& img
 						animation: call .2s infinite ease-in-out
 
+	&__mob-logo
+		display: none
+
 @include media( 1600 )
 	.header__contacts .contacts-text .phone
 		font-size: 17px
@@ -129,6 +132,17 @@
 @include media( 1440 )
 	.header__contacts .contacts-text .time
 		font-size: 11px
+@include media(1024)
+	.header__mob-logo
+		width: 100px
+		display: flex
+	.header .box
+		padding: 0px 5px
+@include media(330)
+	.header__contacts .contacts-text .phone 
+    	font-size: 13px !important
+	.header__contacts .contacts-text .time
+		font-size: 10px
 
 @keyframes call
 	0%
